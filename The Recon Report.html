@@ -1,0 +1,759 @@
+<!-- WILD BLUE EXPERIENCES — The Recon Report v2 -->
+<p><link href="https://fonts.googleapis.com" rel="preconnect"> <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"> <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&amp;display=swap"></p>
+<style>
+.wbx{--ink:#2a2a2a;--muted:#8a8a8a;--line:#e8e6e2;--soft:#f5f3ef;--sky:#c8d8e4;--sd:#6b8caa;--si:#2c4a6b;--warm:#e8d9c4;--fav:#d4a94c;max-width:800px;margin:0 auto;color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;font-size:15px;line-height:1.65;font-weight:300;box-sizing:border-box;-webkit-text-size-adjust:100%}
+.wbx *,.wbx *::before,.wbx *::after{box-sizing:border-box}
+.wbx h1,.wbx h2,.wbx h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:300;color:var(--ink);margin:0 0 12px;line-height:1.15}
+.wbx h1{font-size:clamp(2.4rem,6vw,4rem)}.wbx h2{font-size:clamp(1.6rem,3.5vw,2.2rem)}.wbx p{margin:0 0 14px}
+.wbx-hero{padding:clamp(60px,12vw,100px) 24px clamp(48px,10vw,80px);text-align:center;background:var(--si);color:#fff}
+.wbx-hero .ey{display:block;font-size:.72rem;letter-spacing:5px;text-transform:uppercase;opacity:.85;margin-bottom:20px}
+.wbx-hero h1{color:#fff;margin-bottom:16px}
+.wbx-hero .ld{font-family:"Cormorant Garamond",Georgia,serif;font-style:italic;font-size:clamp(1rem,2vw,1.25rem);max-width:560px;margin:0 auto;opacity:.92;line-height:1.5}
+.wbx-nav{display:flex;overflow-x:auto;-webkit-overflow-scrolling:touch;border-bottom:1px solid var(--line);background:var(--soft);position:sticky;top:0;z-index:100;scrollbar-width:none}
+.wbx-nav::-webkit-scrollbar{display:none}
+.wbx-nav a{flex-shrink:0;padding:16px 18px;font-size:.68rem;letter-spacing:2.5px;text-transform:uppercase;color:var(--muted);text-decoration:none;border-bottom:2px solid transparent;transition:all .2s;white-space:nowrap}
+.wbx-nav a:hover{color:var(--si);border-bottom-color:var(--sd)}
+.wbx-in{padding:0 20px}
+.wbx-sec{padding-top:64px;margin-top:-32px}
+.wbx-st{text-align:center;margin-bottom:6px}
+.wbx-ss{text-align:center;max-width:520px;margin:0 auto 32px;font-family:"Cormorant Garamond",Georgia,serif;font-style:italic;font-size:1.05rem;color:var(--muted)}
+.wbx-fl{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-bottom:28px}
+.wbx-fb{padding:8px 18px;font-size:.7rem;letter-spacing:1.5px;text-transform:uppercase;background:#fff;border:1px solid var(--line);border-radius:2px;color:var(--muted);cursor:pointer;transition:all .2s;font-family:inherit;font-weight:400}
+.wbx-fb:hover{border-color:var(--sd);color:var(--si)}
+.wbx-fb.on{background:var(--si);color:#fff;border-color:var(--si)}
+.wbx-cat{font-size:.68rem;letter-spacing:3px;text-transform:uppercase;color:var(--si);font-weight:500;padding-bottom:10px;border-bottom:1px solid var(--line);margin:40px 0 16px}
+.wbx-l{list-style:none;padding:0;margin:0 0 8px}
+.wbx-i{display:flex;align-items:flex-start;gap:14px;padding:16px 0;border-bottom:1px solid var(--line);text-decoration:none;color:inherit;transition:background .15s}
+.wbx-i:last-child{border-bottom:none}
+.wbx-i:hover{background:rgba(200,216,228,.08)}
+.wbx-ib{flex:1;min-width:0}
+.wbx-in-name{font-family:"Cormorant Garamond",Georgia,serif;font-weight:400;font-size:1.15rem;color:var(--ink);margin:0 0 3px;line-height:1.3;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.wbx-bg{display:inline-block;font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;font-size:.58rem;letter-spacing:1.5px;text-transform:uppercase;padding:2px 8px;border-radius:2px;font-weight:500;line-height:1.6;flex-shrink:0}
+.wbx-bg-f{background:var(--fav);color:#fff}.wbx-bg-n{background:var(--sky);color:var(--si)}.wbx-bg-d{background:#3a7d44;color:#fff}
+.wbx-id{margin:0;font-size:.88rem;color:var(--muted);line-height:1.5}
+.wbx-im{flex-shrink:0;text-align:right;font-size:.72rem;color:var(--sd);font-weight:400;padding-top:2px;min-width:60px}
+.wbx-im .dr{display:block;white-space:nowrap}
+.wbx-note{margin:36px 0;padding:22px 24px;background:var(--warm);font-style:italic;font-family:"Cormorant Garamond",Georgia,serif;font-size:1.05rem;color:var(--ink);border-radius:2px;line-height:1.55}
+.wbx-note strong{font-style:normal;font-weight:500;color:var(--si)}
+.wbx-hr{border:none;border-top:1px solid var(--line);margin:56px auto;max-width:60px}
+.wbx-cta{text-align:center;padding:80px 24px;margin-top:64px;background:var(--si)}
+.wbx-cta .ey{display:block;font-size:.72rem;letter-spacing:5px;text-transform:uppercase;color:#fff;opacity:.85;margin-bottom:20px}
+.wbx-cta h2{color:#fff;margin-bottom:16px;font-size:clamp(1.8rem,4vw,2.6rem)}
+.wbx-cta p{color:#fff;max-width:480px;margin:0 auto 28px;font-family:"Cormorant Garamond",Georgia,serif;font-size:1.2rem;font-style:italic;line-height:1.5;opacity:.92}
+.wbx-btn{display:inline-block;background:#fff;color:var(--si)!important;padding:16px 36px;text-decoration:none!important;font-size:.7rem;letter-spacing:2.5px;text-transform:uppercase;border:none!important;border-radius:2px;transition:background .2s;font-weight:500}
+.wbx-btn:hover{background:var(--warm)}
+@media(max-width:640px){.wbx-in{padding:0 16px}.wbx-nav a{padding:14px 14px;font-size:.62rem;letter-spacing:2px}.wbx-i{gap:10px;padding:14px 0}.wbx-in-name{font-size:1.05rem}.wbx-id{font-size:.82rem}.wbx-im{min-width:50px;font-size:.66rem}.wbx-fb{padding:7px 14px;font-size:.62rem}}
+</style>
+<div class="wbx">
+<div class="wbx-hero">
+<span class="ey">Wild Blue Experiences</span>
+<h1>The Recon Report</h1>
+<p class="ld">Your tactical guide to Colorado Springs. Tap any spot to see hours, directions &amp; reviews.</p>
+</div>
+<nav class="wbx-nav"><a href="#s-dining">Dining</a><a href="#s-coffee">Coffee</a><a href="#s-brew">Breweries</a><a href="#s-act">Activities</a><a href="#s-stay">Stay</a><a href="#s-shop">Shopping</a><a href="#s-day">Day Trips</a></nav>
+<div class="wbx-in">
+<!-- ========== DINING ========== -->
+<div id="s-dining" class="wbx-sec">
+<h2 class="wbx-st">Food &amp; Drink</h2>
+<p class="wbx-ss">Drive times from North Gate. Tap any name to open Google Maps.</p>
+<div class="wbx-fl" data-sec="dining">
+<button class="wbx-fb on" data-f="fav">Cadet Favorites</button> <button class="wbx-fb" data-f="near">Near USAFA</button> <button class="wbx-fb" data-f="all">All Options</button>
+</div>
+<div class="wbx-cat">01 // Recon: Breakfast</div>
+<ul class="wbx-l">
+<li><a class="wbx-i" href="https://maps.google.com/?q=New+Day+Cafe+Delmonico+Colorado+Springs" data-t="fav near" target="_blank">
+<div class="wbx-ib">
+<p class="wbx-in-name">New Day Cafe <span class="wbx-bg wbx-bg-f">Fav</span> <span class="wbx-bg wbx-bg-n">Near USAFA</span></p>
+<p class="wbx-id">Family-owned breakfast &amp; lunch. Pikes Peak views. Two locations.</p>
+</div>
+<div class="wbx-im"><span class="dr">~10 min</span></div>
+</a></li>
+<li><a class="wbx-i" href="https://maps.google.com/?q=Urban+Egg+Briargate+Colorado+Springs" data-t="fav near" target="_blank">
+<div class="wbx-ib">
+<p class="wbx-in-name">Urban Egg <span class="wbx-bg wbx-bg-f">Fav</span></p>
+<p class="wbx-id">Award-winning. Multiple COS locations — Briargate &amp; Downtown.</p>
+</div>
+<div class="wbx-im"><span class="dr">~12 min</span></div>
+</a></li>
+<li><a class="wbx-i" href="https://maps.google.com/?q=King's+Chef+Diner+Colorado+Springs" data-t="fav" target="_blank">
+<div class="wbx-ib">
+<p class="wbx-in-name">King's Chef Diner <span class="wbx-bg wbx-bg-f">Fav</span></p>
+<p class="wbx-id">The green chili king. Featured on Diners, Drive-Ins &amp; Dives.</p>
+</div>
+<div class="wbx-im"><span class="dr">~25 min</span></div>
+</a></li>
+<li><a class="wbx-i" href="https://maps.google.com/?q=Atomic+Cowboy+Colorado+Springs" data-t="all" target="_blank">
+<div class="wbx-ib">
+<p class="wbx-in-name">Atomic Cowboy</p>
+<p class="wbx-id">Home of Denver Biscuit Co. Great for breakfast and dinner.</p>
+</div>
+<div class="wbx-im"><span class="dr">~22 min</span></div>
+</a></li>
+<li><a class="wbx-i" href="https://maps.google.com/?q=Rosie's+Diner+Monument+CO" data-t="near all" target="_blank">
+<div class="wbx-ib">
+<p class="wbx-in-name">Rosie's Diner <span class="wbx-bg wbx-bg-n">Near USAFA</span></p>
+<p class="wbx-id">Retro 50s diner in Monument with excellent breakfast.</p>
+</div>
+<div class="wbx-im"><span class="dr">~15 min</span></div>
+</a></li>
+<li><a class="wbx-i" href="https://maps.google.com/?q=Atmosphere+Gastropub+Interquest+Colorado+Springs" data-t="near all" target="_blank">
+<div class="wbx-ib">
+<p class="wbx-in-name">Atmosphere Gastropub <span class="wbx-bg wbx-bg-n">Near USAFA</span></p>
+<p class="wbx-id">Fun brunch &amp; dinner near Interquest. Great cocktails.</p>
+</div>
+<div class="wbx-im"><span class="dr">~8 min</span></div>
+</a></li>
+<li><a class="wbx-i" href="https://maps.google.com/?q=Black+Bear+Diner+Colorado+Springs" data-t="fav all" target="_blank">
+<div class="wbx-ib">
+<p class="wbx-in-name">Black Bear Diner <span class="wbx-bg wbx-bg-d">15% off — mention WBM</span></p>
+<p class="wbx-id">Feel-good classic diner (Garden of the Gods location). Great for families.</p>
+</div>
+<div class="wbx-im"><span class="dr">~15 min</span></div>
+</a></li>
+</ul>
+<div class="wbx-cat">02 // Mid-Day: Lunch</div>
+<ul class="wbx-l">
+<li><a class="wbx-i" href="https://maps.google.com/?q=Skirted+Heifer+Colorado+Springs" data-t="fav" target="_blank">
+<div class="wbx-ib">
+<p class="wbx-in-name">Skirted Heifer <span class="wbx-bg wbx-bg-f">Fav</span></p>
+<p class="wbx-id">Voted best burgers in the city, 7 years running. Two locations.</p>
+</div>
+<div class="wbx-im"><span class="dr">~22 min</span></div>
+</a></li>
+<li><a class="wbx-i" href="https://maps.google.com/?q=Monse's+Pupuseria+Colorado+Springs" data-t="fav" target="_blank">
+<div class="wbx-ib">
+<p class="wbx-in-name">Monse's Pupuseria <span class="wbx-bg wbx-bg-f">Fav</span> <span class="wbx-bg wbx-bg-d">10% off — mention WBM</span></p>
+<p class="wbx-id">Authentic Salvadoran. 100% gluten-free. Amazing.</p>
+</div>
+<div class="wbx-im"><span class="dr">~28 min</span></div>
+</a></li>
+<li><a class="wbx-i" href="https://maps.google.com/?q=Cerberus+Brewing+Company+Colorado+Springs" data-t="fav" target="_blank">
+<div class="wbx-ib">
+<p class="wbx-in-name">Cerberus Brewing <span class="wbx-bg wbx-bg-f">Fav</span></p>
+<p class="wbx-id">Top-tier brisket grilled cheese and award-winning craft beer.</p>
+</div>
+<div class="wbx-im"><span class="dr">~20 min</span></div>
+</a></li>
+<li><a class="wbx-i" href="https://maps.google.com/?q=Mugi+Food+Colorado+Springs" data-t="all" target="_blank">
+<div class="wbx-ib">
+<p class="wbx-in-name">Mugi Poke &amp; Ramen</p>
+<p class="wbx-id">Fresh poke bowls and comforting ramen.</p>
+</div>
+<div class="wbx-im"><span class="dr">~20 min</span></div>
+</a></li>
+<li><a class="wbx-i" href="https://maps.google.com/?q=Snarf's+Sub+Shop+Colorado+Springs" data-t="all" target="_blank">
+<div class="wbx-ib">
+<p class="wbx-in-name">Snarf's Sub Shop</p>
+<p class="wbx-id">Top-tier sandwich stop.</p>
+</div>
+<div class="wbx-im"><span class="dr">~15 min</span></div>
+</a></li>
+<li><a class="wbx-i" href="https://maps.google.com/?q=HuHot+Mongolian+Grill+Colorado+Springs" data-t="near all" target="_blank">
+<div class="wbx-ib">
+<p class="wbx-in-name">HuHot Mongolian Grill <span class="wbx-bg wbx-bg-n">Near USAFA</span></p>
+<p class="wbx-id">Build-your-own stir fry. Fun, social dining.</p>
+</div>
+<div class="wbx-im"><span class="dr">~8 min</span></div>
+</a></li>
+</ul>
+<div class="wbx-cat">03 // Debrief: Dinner</div>
+<ul class="wbx-l">
+<li><a class="wbx-i" href="https://maps.google.com/?q=The+Rabbit+Hole+Restaurant+Colorado+Springs" data-t="fav" target="_blank">
+<div class="wbx-ib">
+<p class="wbx-in-name">The Rabbit Hole <span class="wbx-bg wbx-bg-f">Fav</span></p>
+<p class="wbx-id">Upscale underground "wonderland." Perfect for milestones.</p>
+</div>
+<div class="wbx-im"><span class="dr">~22 min</span></div>
+</a></li>
+<li><a class="wbx-i" href="https://maps.google.com/?q=COATI+Uprise+Colorado+Springs" data-t="fav" target="_blank">
+<div class="wbx-ib">
+<p class="wbx-in-name">COATI <span class="wbx-bg wbx-bg-f">Fav</span></p>
+<p class="wbx-id">Food hall, bars, live DJs. Something for everyone.</p>
+</div>
+<div class="wbx-im"><span class="dr">~22 min</span></div>
+</a></li>
+<li><a class="wbx-i" href="https://maps.google.com/?q=Four+by+Brother+Luck+Colorado+Springs" data-t="fav" target="_blank">
+<div class="wbx-ib">
+<p class="wbx-in-name">Four by Brother Luck <span class="wbx-bg wbx-bg-f">Fav</span> <span class="wbx-bg wbx-bg-d">15% off — mention WBM</span></p>
+<p class="wbx-id">Creative upscale dining from Top Chef finalist.</p>
+</div>
+<div class="wbx-im"><span class="dr">~22 min</span></div>
+</a></li>
+<li><a class="wbx-i" href="https://maps.google.com/?q=Flying+Horse+Resort+Steakhouse+Colorado+Springs" data-t="near fav" target="_blank">
+<div class="wbx-ib">
+<p class="wbx-in-name">Flying Horse Steakhouse <span class="wbx-bg wbx-bg-n">Near USAFA</span></p>
+<p class="wbx-id">Outstanding food with mountain views. Pricier, worth it.</p>
+</div>
+<div class="wbx-im"><span class="dr">~8 min</span></div>
+</a></li>
+<li><a class="wbx-i" href="https://maps.google.com/?q=Peppertree+Restaurant+Colorado+Springs" data-t="all" target="_blank">
+<div class="wbx-ib">
+<p class="wbx-in-name">The Peppertree</p>
+<p class="wbx-id">High-end, table-side cooking since 1983.</p>
+</div>
+<div class="wbx-im"><span class="dr">~25 min</span></div>
+</a></li>
+<li><a class="wbx-i" href="https://maps.google.com/?q=The+Airplane+Restaurant+Colorado+Springs" data-t="all" target="_blank">
+<div class="wbx-ib">
+<p class="wbx-in-name">Airplane Restaurant</p>
+<p class="wbx-id">Dine inside a KC-97 Tanker. One-of-a-kind.</p>
+</div>
+<div class="wbx-im"><span class="dr">~25 min</span></div>
+</a></li>
+<li><a class="wbx-i" href="https://maps.google.com/?q=The+Famous+Steak+House+Colorado+Springs" data-t="all" target="_blank">
+<div class="wbx-ib">
+<p class="wbx-in-name">The Famous Steak House</p>
+<p class="wbx-id">Classic steakhouse. A Colorado Springs institution.</p>
+</div>
+<div class="wbx-im"><span class="dr">~22 min</span></div>
+</a></li>
+<li><a class="wbx-i" href="https://maps.google.com/?q=Overseas+101+Chinese+Colorado+Springs" data-t="all" target="_blank">
+<div class="wbx-ib">
+<p class="wbx-in-name">Overseas 101</p>
+<p class="wbx-id">Excellent Chinese food.</p>
+</div>
+<div class="wbx-im"><span class="dr">~12 min</span></div>
+</a></li>
+<li><a class="wbx-i" href="https://maps.google.com/?q=Atomic+Cowboy+Colorado+Springs" data-t="all" target="_blank">
+<div class="wbx-ib">
+<p class="wbx-in-name">Atomic Cowboy / Fat Sully's</p>
+<p class="wbx-id">Fat Sully's NY pizza takes over at night.</p>
+</div>
+<div class="wbx-im"><span class="dr">~22 min</span></div>
+</a></li>
+<li><a class="wbx-i" href="https://maps.google.com/?q=Cliff+House+Dining+Room+Manitou+Springs" data-t="all" target="_blank">
+<div class="wbx-ib">
+<p class="wbx-in-name">The Cliff House</p>
+<p class="wbx-id">Elegant dining in historic Manitou Springs.</p>
+</div>
+<div class="wbx-im"><span class="dr">~30 min</span></div>
+</a></li>
+<li><a class="wbx-i" href="https://maps.google.com/?q=Thai+Mint+Colorado+Springs" data-t="all" target="_blank">
+<div class="wbx-ib">
+<p class="wbx-in-name">Thai Mint</p>
+<p class="wbx-id">Flavorful Thai cuisine. Great change of pace.</p>
+</div>
+<div class="wbx-im"><span class="dr">~18 min</span></div>
+</a></li>
+</ul>
+<div class="wbx-cat">04 // Pizza</div>
+<ul class="wbx-l">
+<li><a class="wbx-i" href="https://maps.google.com/?q=Walter's+303+Pizzeria+Colorado+Springs" data-t="fav" target="_blank">
+<div class="wbx-ib">
+<p class="wbx-in-name">Walter's 303 Pizzeria <span class="wbx-bg wbx-bg-f">Fav</span></p>
+<p class="wbx-id">Great pizza, legendary tap list. Multiple locations.</p>
+</div>
+<div class="wbx-im"><span class="dr">~15 min</span></div>
+</a></li>
+<li><a class="wbx-i" href="https://maps.google.com/?q=Parry's+Pizzeria+Taphouse+Colorado+Springs" data-t="near all" target="_blank">
+<div class="wbx-ib">
+<p class="wbx-in-name">Parry's Pizzeria <span class="wbx-bg wbx-bg-n">Near USAFA</span> <span class="wbx-bg wbx-bg-d">20% off — mention WBM</span>
+</p>
+<p class="wbx-id">Great pizza and sports atmosphere.</p>
+</div>
+<div class="wbx-im"><span class="dr">~10 min</span></div>
+</a></li>
+<li><a class="wbx-i" href="https://maps.google.com/?q=Slice+420+Colorado+Springs" data-t="fav all" target="_blank">
+<div class="wbx-ib">
+<p class="wbx-in-name">Slice 420 
+</p>
+<p class="wbx-id">Late-night pizza. Perfect quick bite.</p>
+</div>
+<div class="wbx-im"><span class="dr">~28 min</span></div>
+</a></li>
+<li><a class="wbx-i" href="https://maps.google.com/?q=Papa+Bear+Pizza+Colorado+Springs" data-t="all" target="_blank">
+<div class="wbx-ib">
+<p class="wbx-in-name">Papa Bear Pizza</p>
+<p class="wbx-id">Local favorite with hearty pies.</p>
+</div>
+<div class="wbx-im"><span class="dr">~18 min</span></div>
+</a></li>
+</ul>
+<div class="wbx-cat">05 // Mexican</div>
+<ul class="wbx-l">
+<li><a class="wbx-i" href="https://maps.google.com/?q=Amanda's+Fonda+Colorado+Springs" data-t="fav" target="_blank">
+<div class="wbx-ib">
+<p class="wbx-in-name">Amanda's Fonda <span class="wbx-bg wbx-bg-f">Fav</span></p>
+<p class="wbx-id">A true local favorite.</p>
+</div>
+<div class="wbx-im"><span class="dr">~28 min</span></div>
+</a></li>
+<li><a class="wbx-i" href="https://maps.google.com/?q=Hacienda+Colorado+Colorado+Springs" data-t="near all" target="_blank">
+<div class="wbx-ib">
+<p class="wbx-in-name">Hacienda Colorado <span class="wbx-bg wbx-bg-n">Near USAFA</span></p>
+<p class="wbx-id">Solid Mountain Mex food.</p>
+</div>
+<div class="wbx-im"><span class="dr">~10 min</span></div>
+</a></li>
+<li><a class="wbx-i" href="https://maps.google.com/?q=Crystal+Park+Cantina+Manitou+Springs" data-t="all" target="_blank">
+<div class="wbx-ib">
+<p class="wbx-in-name">Crystal Park Cantina</p>
+<p class="wbx-id">Great Mexican with a fun cantina vibe.</p>
+</div>
+<div class="wbx-im"><span class="dr">~30 min</span></div>
+</a></li>
+<li><a class="wbx-i" href="https://maps.google.com/?q=Miguel's+Mexican+Bar+Grill+Colorado+Springs" data-t="all" target="_blank">
+<div class="wbx-ib">
+<p class="wbx-in-name">Miguel's Mexican Bar &amp; Grill</p>
+<p class="wbx-id">Tasty and dependable.</p>
+</div>
+<div class="wbx-im"><span class="dr">~18 min</span></div>
+</a></li>
+<li><a class="wbx-i" href="https://maps.google.com/?q=Pueblo+Viejo+Colorado+Springs" data-t="all" target="_blank">
+<div class="wbx-ib">
+<p class="wbx-in-name">Pueblo Viejo</p>
+<p class="wbx-id">Authentic and well-loved.</p>
+</div>
+<div class="wbx-im"><span class="dr">~18 min</span></div>
+</a></li>
+<li><a class="wbx-i" href="https://maps.google.com/?q=Vaqueros+Colorado+Springs" data-t="all" target="_blank">
+<div class="wbx-ib">
+<p class="wbx-in-name">Vaqueros</p>
+<p class="wbx-id">Great flavors, casual setting.</p>
+</div>
+<div class="wbx-im"><span class="dr">~18 min</span></div>
+</a></li>
+<li><a class="wbx-i" href="https://maps.google.com/?q=Monica's+Taco+Shop+Colorado+Springs" data-t="all" target="_blank">
+<div class="wbx-ib">
+<p class="wbx-in-name">Monica's Taco Shop</p>
+<p class="wbx-id">Quick, delicious tacos.</p>
+</div>
+<div class="wbx-im"><span class="dr">~20 min</span></div>
+</a></li>
+<li><a class="wbx-i" href="https://maps.google.com/?q=Tlaquepaque+Colorado+Springs" data-t="all" target="_blank">
+<div class="wbx-ib">
+<p class="wbx-in-name">Tlaquepaque</p>
+<p class="wbx-id">Worth the drive for super authentic Mexican.</p>
+</div>
+<div class="wbx-im"><span class="dr">~25 min</span></div>
+</a></li>
+</ul>
+<div class="wbx-cat">06 // Right Near the Academy</div>
+<ul class="wbx-l">
+<li><a class="wbx-i" href="https://maps.google.com/?q=The+Brass+Tap+Interquest+Colorado+Springs" data-t="near fav" target="_blank">
+<div class="wbx-ib">
+<p class="wbx-in-name">The Brass Tap <span class="wbx-bg wbx-bg-n">Near USAFA</span></p>
+<p class="wbx-id">Sports bar, great beer selection. Right by the academy.</p>
+</div>
+<div class="wbx-im"><span class="dr">~5 min</span></div>
+</a></li>
+<li><a class="wbx-i" href="https://maps.google.com/?q=Red's+Sunset+Grill+Colorado+Springs" data-t="near fav" target="_blank">
+<div class="wbx-ib">
+<p class="wbx-in-name">Red's Sunset Grill <span class="wbx-bg wbx-bg-n">Near USAFA</span></p>
+<p class="wbx-id">Great social bar environment.</p>
+</div>
+<div class="wbx-im"><span class="dr">~5 min</span></div>
+</a></li>
+</ul>
+</div>
+<hr class="wbx-hr">
+<!-- ========== COFFEE ========== -->
+<div id="s-coffee" class="wbx-sec">
+<h2 class="wbx-st">Coffee Shops</h2>
+<p class="wbx-ss">Perfect for a relaxed morning with your cadet.</p>
+<ul class="wbx-l">
+<li><a class="wbx-i" href="https://maps.google.com/?q=Loyal+Coffee+Colorado+Springs" target="_blank">
+<div class="wbx-ib">
+<p class="wbx-in-name">Loyal Coffee</p>
+<p class="wbx-id">Specialty coffee, clean modern vibe downtown.</p>
+</div>
+<div class="wbx-im"><span class="dr">~22 min</span></div>
+</a></li>
+<li><a class="wbx-i" href="https://maps.google.com/?q=Wayfinder+Coffee+Co+Colorado+Springs" target="_blank">
+<div class="wbx-ib">
+<p class="wbx-in-name">Wayfinder Coffee Co.</p>
+<p class="wbx-id">Cozy spot with quality brews and great pastries.</p>
+</div>
+<div class="wbx-im"><span class="dr">~18 min</span></div>
+</a></li>
+<li><a class="wbx-i" href="https://maps.google.com/?q=Switchback+Coffee+Roasters+Colorado+Springs" target="_blank">
+<div class="wbx-ib">
+<p class="wbx-in-name">Switchback Coffee Roasters</p>
+<p class="wbx-id">Locally roasted, always fresh.</p>
+</div>
+<div class="wbx-im"><span class="dr">~22 min</span></div>
+</a></li>
+<li><a class="wbx-i" href="https://maps.google.com/?q=Urban+Steam+American+Bistro+Colorado+Springs" target="_blank">
+<div class="wbx-ib">
+<p class="wbx-in-name">Urban Steam American Bistro</p>
+<p class="wbx-id">Coffee meets bistro. Great for a leisurely morning.</p>
+</div>
+<div class="wbx-im"><span class="dr">~22 min</span></div>
+</a></li>
+<li><a class="wbx-i" href="https://maps.google.com/?q=Kairos+Coffee+House+Colorado+Springs" target="_blank">
+<div class="wbx-ib">
+<p class="wbx-in-name">Kairos Coffee House</p>
+<p class="wbx-id">Welcoming spot with Pikes Peak patio views.</p>
+</div>
+<div class="wbx-im"><span class="dr">~20 min</span></div>
+</a></li>
+</ul>
+</div>
+<hr class="wbx-hr">
+<!-- ========== BREWERIES ========== -->
+<div id="s-brew" class="wbx-sec">
+<h2 class="wbx-st">Breweries &amp; Bars</h2>
+<p class="wbx-ss">Colorado Springs is a major craft beer destination.</p>
+<ul class="wbx-l">
+<li><a class="wbx-i" href="https://maps.google.com/?q=Phantom+Canyon+Brewing+Colorado+Springs" target="_blank">
+<div class="wbx-ib">
+<p class="wbx-in-name">Phantom Canyon Brewing</p>
+<p class="wbx-id">Iconic downtown brewpub in a historic building.</p>
+</div>
+<div class="wbx-im"><span class="dr">~22 min</span></div>
+</a></li>
+<li><a class="wbx-i" href="https://maps.google.com/?q=Cerberus+Brewing+Company+Colorado+Springs" target="_blank">
+<div class="wbx-ib">
+<p class="wbx-in-name">Cerberus Brewing</p>
+<p class="wbx-id">Award-winning brews and great food.</p>
+</div>
+<div class="wbx-im"><span class="dr">~20 min</span></div>
+</a></li>
+<li><a class="wbx-i" href="https://maps.google.com/?q=Red+Leg+Brewing+Company+Colorado+Springs" target="_blank">
+<div class="wbx-ib">
+<p class="wbx-in-name">Red Leg Brewing</p>
+<p class="wbx-id">Military-themed brewery. Perfect for USAFA families.</p>
+</div>
+<div class="wbx-im"><span class="dr">~20 min</span></div>
+</a></li>
+<li><a class="wbx-i" href="https://maps.google.com/?q=Bristol+Brewing+Company+Colorado+Springs" target="_blank">
+<div class="wbx-ib">
+<p class="wbx-in-name">Bristol Brewing</p>
+<p class="wbx-id">A Colorado Springs craft beer staple.</p>
+</div>
+<div class="wbx-im"><span class="dr">~25 min</span></div>
+</a></li>
+<li><a class="wbx-i" href="https://maps.google.com/?q=Dublin+House+Pub+Colorado+Springs" target="_blank">
+<div class="wbx-ib">
+<p class="wbx-in-name">Dublin House</p>
+<p class="wbx-id">Cozy Irish pub. Great for a relaxed evening.</p>
+</div>
+<div class="wbx-im"><span class="dr">~22 min</span></div>
+</a></li>
+<li><a class="wbx-i" href="https://maps.google.com/?q=The+Piano+Bar+Downtown+Colorado+Springs" target="_blank">
+<div class="wbx-ib">
+<p class="wbx-in-name">The Piano Bar Downtown</p>
+<p class="wbx-id">Live dueling pianos. Lively night out.</p>
+</div>
+<div class="wbx-im"><span class="dr">~22 min</span></div>
+</a></li>
+</ul>
+</div>
+<hr class="wbx-hr">
+<!-- ========== ACTIVITIES ========== -->
+<div id="s-act" class="wbx-sec">
+<h2 class="wbx-st">Activities &amp; Excursions</h2>
+<p class="wbx-ss">Make the most of your time in the Springs.</p>
+<div class="wbx-cat">Must-Do</div>
+<ul class="wbx-l">
+<li><a class="wbx-i" href="https://maps.google.com/?q=Garden+of+the+Gods+Colorado+Springs" target="_blank">
+<div class="wbx-ib">
+<p class="wbx-in-name">Garden of the Gods <span class="wbx-bg wbx-bg-f">Must-Do</span></p>
+<p class="wbx-id">Iconic red rock formations. Free entry, incredible photo spots.</p>
+</div>
+<div class="wbx-im"><span class="dr">~25 min</span></div>
+</a></li>
+<li><a class="wbx-i" href="https://maps.google.com/?q=Pikes+Peak+Highway+Colorado" target="_blank">
+<div class="wbx-ib">
+<p class="wbx-in-name">Pikes Peak <span class="wbx-bg wbx-bg-f">Must-Do</span></p>
+<p class="wbx-id">Scenic highway, Cog Railway, or hike the summit.</p>
+</div>
+<div class="wbx-im"><span class="dr">~40 min</span></div>
+</a></li>
+<li><a class="wbx-i" href="https://maps.google.com/?q=Manitou+Springs+Colorado" target="_blank">
+<div class="wbx-ib">
+<p class="wbx-in-name">Manitou Springs</p>
+<p class="wbx-id">Charming town — shops, galleries, Penny Arcade &amp; the Incline.</p>
+</div>
+<div class="wbx-im"><span class="dr">~30 min</span></div>
+</a></li>
+<li><a class="wbx-i" href="https://maps.google.com/?q=Cave+of+the+Winds+Manitou+Springs" target="_blank">
+<div class="wbx-ib">
+<p class="wbx-in-name">Cave of the Winds</p>
+<p class="wbx-id">Mountain park with cave tours and rides.</p>
+</div>
+<div class="wbx-im"><span class="dr">~30 min</span></div>
+</a></li>
+<li><a class="wbx-i" href="https://maps.google.com/?q=Seven+Falls+Colorado+Springs" target="_blank">
+<div class="wbx-ib">
+<p class="wbx-in-name">Seven Falls</p>
+<p class="wbx-id">Stunning cascading waterfalls.</p>
+</div>
+<div class="wbx-im"><span class="dr">~30 min</span></div>
+</a></li>
+</ul>
+<div class="wbx-cat">Family Activities</div>
+<ul class="wbx-l">
+<li><a class="wbx-i" href="https://maps.google.com/?q=Topgolf+Colorado+Springs" target="_blank">
+<div class="wbx-ib">
+<p class="wbx-in-name">Topgolf</p>
+<p class="wbx-id">Reserve a bay for the family. Great food and fun.</p>
+</div>
+<div class="wbx-im"><span class="dr">~15 min</span></div>
+</a></li>
+<li><a class="wbx-i" href="https://maps.google.com/?q=Cheyenne+Mountain+Zoo+Colorado+Springs" target="_blank">
+<div class="wbx-ib">
+<p class="wbx-in-name">Cheyenne Mountain Zoo</p>
+<p class="wbx-id">Top-rated zoo perched on a mountainside.</p>
+</div>
+<div class="wbx-im"><span class="dr">~30 min</span></div>
+</a></li>
+<li><a class="wbx-i" href="https://maps.google.com/?q=iFLY+Indoor+Skydiving+Colorado+Springs" target="_blank">
+<div class="wbx-ib">
+<p class="wbx-in-name">iFLY Indoor Skydiving</p>
+<p class="wbx-id">Experience the thrill without leaving the ground.</p>
+</div>
+<div class="wbx-im"><span class="dr">~15 min</span></div>
+</a></li>
+<li><a class="wbx-i" href="https://maps.google.com/?q=Scheels+Colorado+Springs" target="_blank">
+<div class="wbx-ib">
+<p class="wbx-in-name">Scheels</p>
+<p class="wbx-id">Massive sporting goods store with indoor attractions.</p>
+</div>
+<div class="wbx-im"><span class="dr">~12 min</span></div>
+</a></li>
+</ul>
+<div class="wbx-cat">Outdoor Adventures</div>
+<ul class="wbx-l">
+<li><a class="wbx-i" href="https://maps.google.com/?q=Red+Rock+Canyon+Open+Space+Colorado+Springs" target="_blank">
+<div class="wbx-ib">
+<p class="wbx-in-name">Red Rock Canyon Open Space</p>
+<p class="wbx-id">Beautiful trails and red rock scenery without the crowds.</p>
+</div>
+<div class="wbx-im"><span class="dr">~28 min</span></div>
+</a></li>
+<li><a class="wbx-i" href="https://maps.google.com/?q=Helen+Hunt+Falls+Colorado+Springs" target="_blank">
+<div class="wbx-ib">
+<p class="wbx-in-name">Helen Hunt Falls</p>
+<p class="wbx-id">Scenic waterfall hike near the city.</p>
+</div>
+<div class="wbx-im"><span class="dr">~30 min</span></div>
+</a></li>
+<li><a class="wbx-i" href="https://maps.google.com/?q=Manitou+Incline+Colorado+Springs" target="_blank">
+<div class="wbx-ib">
+<p class="wbx-in-name">The Incline</p>
+<p class="wbx-id">For serious hikers — iconic steep staircase climb.</p>
+</div>
+<div class="wbx-im"><span class="dr">~30 min</span></div>
+</a></li>
+</ul>
+</div>
+<hr class="wbx-hr">
+<!-- ========== STAY ========== -->
+<div id="s-stay" class="wbx-sec">
+<h2 class="wbx-st">Places to Stay</h2>
+<p class="wbx-ss">From five-star luxury to budget-friendly near the academy.</p>
+<div class="wbx-cat">Luxury</div>
+<ul class="wbx-l">
+<li><a class="wbx-i" href="https://maps.google.com/?q=The+Broadmoor+Colorado+Springs" target="_blank">
+<div class="wbx-ib">
+<p class="wbx-in-name">The Broadmoor <span class="wbx-bg wbx-bg-f">Iconic</span></p>
+<p class="wbx-id">Five-star luxury. Award-winning restaurants, golf, spa.</p>
+</div>
+<div class="wbx-im"><span class="dr">~30 min</span></div>
+</a></li>
+<li><a class="wbx-i" href="https://maps.google.com/?q=Hotel+Polaris+Colorado+Springs" target="_blank">
+<div class="wbx-ib">
+<p class="wbx-in-name">Hotel Polaris <span class="wbx-bg wbx-bg-n">Near USAFA</span></p>
+<p class="wbx-id">AAA Four Diamond. Aviation-themed, mid-century modern. Flight simulators, rooftop bar, spa. Right at North Gate.</p>
+</div>
+<div class="wbx-im"><span class="dr">~3 min</span></div>
+</a></li>
+</ul>
+<div class="wbx-cat">Hotels Near USAFA</div>
+<ul class="wbx-l">
+<li><a class="wbx-i" href="https://maps.google.com/?q=Drury+Inn+Suites+Air+Force+Academy+Colorado+Springs" target="_blank">
+<div class="wbx-ib">
+<p class="wbx-in-name">Drury Inn &amp; Suites <span class="wbx-bg wbx-bg-f">Top Pick</span></p>
+<p class="wbx-id">Right across from academy entrance. Very popular with families.</p>
+</div>
+<div class="wbx-im"><span class="dr">~3 min</span></div>
+</a></li>
+<li><a class="wbx-i" href="https://maps.google.com/?q=Great+Wolf+Lodge+Colorado+Springs" target="_blank">
+<div class="wbx-ib">
+<p class="wbx-in-name">Great Wolf Lodge</p>
+<p class="wbx-id">Near North Gate. Great with younger siblings.</p>
+</div>
+<div class="wbx-im"><span class="dr">~5 min</span></div>
+</a></li>
+<li><a class="wbx-i" href="https://maps.google.com/?q=The+Academy+Hotel+Colorado+Springs" target="_blank">
+<div class="wbx-ib">
+<p class="wbx-in-name">The Academy Hotel</p>
+<p class="wbx-id">The classic USAFA parent hotel.</p>
+</div>
+<div class="wbx-im"><span class="dr">~5 min</span></div>
+</a></li>
+<li><a class="wbx-i" href="https://maps.google.com/?q=Hilton+Garden+Inn+Colorado+Springs+North" target="_blank">
+<div class="wbx-ib">
+<p class="wbx-in-name">Hilton Garden Inn North</p>
+<p class="wbx-id">Reliable and conveniently located.</p>
+</div>
+<div class="wbx-im"><span class="dr">~8 min</span></div>
+</a></li>
+<li><a class="wbx-i" href="https://maps.google.com/?q=Residence+Inn+Colorado+Springs+North" target="_blank">
+<div class="wbx-ib">
+<p class="wbx-in-name">Residence Inn North</p>
+<p class="wbx-id">Cost-effective suite-style rooms.</p>
+</div>
+<div class="wbx-im"><span class="dr">~8 min</span></div>
+</a></li>
+<li><a class="wbx-i" href="https://maps.google.com/?q=Home2+Suites+Hilton+Colorado+Springs+North" target="_blank">
+<div class="wbx-ib">
+<p class="wbx-in-name">Home2 Suites by Hilton</p>
+<p class="wbx-id">Budget-friendly extended-stay near USAFA.</p>
+</div>
+<div class="wbx-im"><span class="dr">~8 min</span></div>
+</a></li>
+<li><a class="wbx-i" href="https://maps.google.com/?q=Hotel+Elegante+Colorado+Springs" target="_blank">
+<div class="wbx-ib">
+<p class="wbx-in-name">Hotel Elegante</p>
+<p class="wbx-id">Conference center near downtown.</p>
+</div>
+<div class="wbx-im"><span class="dr">~22 min</span></div>
+</a></li>
+</ul>
+<div class="wbx-cat">Best Areas for VRBO / Airbnb</div>
+<ul class="wbx-l">
+<li><a class="wbx-i" href="https://www.vrbo.com/search?destination=Northgate%2C+Colorado+Springs" target="_blank">
+<div class="wbx-ib">
+<p class="wbx-in-name">Northgate <span class="wbx-bg wbx-bg-n">Closest</span></p>
+<p class="wbx-id">Closest to the academy. Quick access.</p>
+</div>
+</a></li>
+<li><a class="wbx-i" href="https://www.vrbo.com/search?destination=Monument%2C+Colorado" target="_blank">
+<div class="wbx-ib">
+<p class="wbx-in-name">Monument</p>
+<p class="wbx-id">Quiet mountain town. Popular with families.</p>
+</div>
+</a></li>
+<li><a class="wbx-i" href="https://www.vrbo.com/search?destination=Flying+Horse%2C+Colorado+Springs" target="_blank">
+<div class="wbx-ib">
+<p class="wbx-in-name">Flying Horse</p>
+<p class="wbx-id">Upscale community with golf.</p>
+</div>
+</a></li>
+<li><a class="wbx-i" href="https://www.vrbo.com/search?destination=Manitou+Springs%2C+Colorado" target="_blank">
+<div class="wbx-ib">
+<p class="wbx-in-name">Manitou Springs</p>
+<p class="wbx-id">Charming &amp; touristy. Great for exploring.</p>
+</div>
+</a></li>
+<li><a class="wbx-i" href="https://www.vrbo.com/search?destination=Downtown+Colorado+Springs" target="_blank">
+<div class="wbx-ib">
+<p class="wbx-in-name">Downtown</p>
+<p class="wbx-id">Central. Easy access to restaurants &amp; nightlife.</p>
+</div>
+</a></li>
+</ul>
+<div class="wbx-note">
+<strong>Tip from USAFA families —</strong> Stay near Interquest / Northgate for quick academy access and tons of nearby restaurants. VRBOs are especially popular for Parents Weekend and Graduation Week.</div>
+</div>
+<hr class="wbx-hr">
+<!-- ========== SHOPPING ========== -->
+<div id="s-shop" class="wbx-sec">
+<h2 class="wbx-st">Shopping</h2>
+<p class="wbx-ss">Top spots to browse between events.</p>
+<ul class="wbx-l">
+<li><a class="wbx-i" href="https://maps.google.com/?q=Promenade+Shops+Briargate+Colorado+Springs" target="_blank">
+<div class="wbx-ib">
+<p class="wbx-in-name">Promenade Shops at Briargate</p>
+<p class="wbx-id">Open-air shopping with great stores &amp; restaurants.</p>
+</div>
+<div class="wbx-im"><span class="dr">~10 min</span></div>
+</a></li>
+<li><a class="wbx-i" href="https://maps.google.com/?q=Chapel+Hills+Mall+Colorado+Springs" target="_blank">
+<div class="wbx-ib">
+<p class="wbx-in-name">Chapel Hills Mall</p>
+<p class="wbx-id">Full-service mall near the north end.</p>
+</div>
+<div class="wbx-im"><span class="dr">~12 min</span></div>
+</a></li>
+<li><a class="wbx-i" href="https://maps.google.com/?q=Downtown+Colorado+Springs" target="_blank">
+<div class="wbx-ib">
+<p class="wbx-in-name">Downtown Shopping District</p>
+<p class="wbx-id">Unique boutiques and local shops.</p>
+</div>
+<div class="wbx-im"><span class="dr">~22 min</span></div>
+</a></li>
+</ul>
+</div>
+<hr class="wbx-hr">
+<!-- ========== DAY TRIPS ========== -->
+<div id="s-day" class="wbx-sec">
+<h2 class="wbx-st">Nearby Day Trips</h2>
+<p class="wbx-ss">Have an extra day? Worth the drive.</p>
+<div class="wbx-cat">Denver (~1 hr north)</div>
+<ul class="wbx-l">
+<li><a class="wbx-i" href="https://maps.google.com/?q=Coors+Field+Denver" target="_blank">
+<div class="wbx-ib">
+<p class="wbx-in-name">Colorado Rockies at Coors Field</p>
+<p class="wbx-id">Catch a game at one of baseball's best ballparks.</p>
+</div>
+</a></li>
+<li><a class="wbx-i" href="https://maps.google.com/?q=LoDo+Denver+Colorado" target="_blank">
+<div class="wbx-ib">
+<p class="wbx-in-name">LoDo Denver</p>
+<p class="wbx-id">Lower Downtown — restaurants, bars, shops.</p>
+</div>
+</a></li>
+<li><a class="wbx-i" href="https://maps.google.com/?q=Denver+Union+Station" target="_blank">
+<div class="wbx-ib">
+<p class="wbx-in-name">Denver Union Station</p>
+<p class="wbx-id">Restored transit hub with dining &amp; cocktails.</p>
+</div>
+</a></li>
+</ul>
+<div class="wbx-cat">Other Destinations</div>
+<ul class="wbx-l">
+<li><a class="wbx-i" href="https://maps.google.com/?q=Woodland+Park+Colorado" target="_blank">
+<div class="wbx-ib">
+<p class="wbx-in-name">Woodland Park</p>
+<p class="wbx-id">Charming mountain town just west of the Springs.</p>
+</div>
+</a></li>
+<li><a class="wbx-i" href="https://maps.google.com/?q=Cripple+Creek+Colorado" target="_blank">
+<div class="wbx-ib">
+<p class="wbx-in-name">Cripple Creek</p>
+<p class="wbx-id">Historic mining town with casinos &amp; Gold Rush history.</p>
+</div>
+</a></li>
+<li><a class="wbx-i" href="https://maps.google.com/?q=Royal+Gorge+Bridge+Park+Canon+City" target="_blank">
+<div class="wbx-ib">
+<p class="wbx-in-name">Royal Gorge Bridge &amp; Park</p>
+<p class="wbx-id">One of the highest suspension bridges in the world.</p>
+</div>
+</a></li>
+</ul>
+</div>
+<hr class="wbx-hr">
+<!-- ========== HIDDEN GEMS ========== -->
+<div class="wbx-sec">
+<h2 class="wbx-st">Hidden Gems Parents Love</h2>
+<ul class="wbx-l">
+<li><a class="wbx-i" href="https://maps.google.com/?q=O'Malley's+Steak+Pub+Palmer+Lake" target="_blank">
+<div class="wbx-ib">
+<p class="wbx-in-name">O'Malley's Steak Pub <span class="wbx-bg wbx-bg-f">Fav</span></p>
+<p class="wbx-id">Cook your own steak on the indoor grill. A cadet favorite in Palmer Lake.</p>
+</div>
+<div class="wbx-im"><span class="dr">~15 min</span></div>
+</a></li>
+<li><a class="wbx-i" href="https://maps.google.com/?q=MilkShake+Factory+Briargate+Colorado+Springs" target="_blank">
+<div class="wbx-ib">
+<p class="wbx-in-name">The Milkshake Factory</p>
+<p class="wbx-id">Handspun milkshakes &amp; craft chocolates in Briargate.</p>
+</div>
+<div class="wbx-im"><span class="dr">~10 min</span></div>
+</a></li>
+</ul>
+</div>
+<div class="wbx-note">
+<strong>A Tip from USAFA Parents —</strong> Our C4C (freshman) usually didn't want to run all over town. After the intense schedule of academy life, what they wanted most was something simple — rest, relaxation, and time with family.</div>
+</div>
+<div class="wbx-cta">
+<span class="ey">Fuel The Mission</span>
+<h2>Gear Up for Your Visit</h2>
+<p>Shop custom Wild Blue Merch — designed by USAFA families, for USAFA families.</p>
+<div style="text-align: center;"><a href="https://wildbluemerch.com" rel="noopener" class="wbx-btn" target="_blank">Shop Wild Blue Merch</a></div>
+</div>
+</div>
+<p> </p>
