@@ -1,0 +1,692 @@
+<!-- Google Tag (loads gtag for GA4 event tracking) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=GT-MRM476T8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'GT-MRM476T8');
+</script>
+
+<!-- =========================================================
+     WILD BLUE MERCH — Graduation Planning Hub
+     Paste into a Shopify Page (Source code view) or Custom Liquid
+
+     IMAGES: Replace the 5 image URLs marked "REPLACE_IMAGE"
+     with your own. Easiest method:
+       1. Shopify Admin → Content → Files → Upload your cadet photos
+       2. Click the link icon next to each uploaded file → copy URL
+       3. Paste each URL into the matching REPLACE_IMAGE spot below
+     ========================================================= -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  .wbm-hub {
+    --ink: #2a2a2a;
+    --muted: #8a8a8a;
+    --line: #e8e6e2;
+    --soft-bg: #f5f3ef;
+    --sky: #c8d8e4;
+    --sky-deep: #6b8caa;
+    --sky-ink: #2c4a6b;
+    --warm: #e8d9c4;
+
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 0 80px;
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.75;
+    font-weight: 300;
+    box-sizing: border-box;
+  }
+  .wbm-hub *, .wbm-hub *::before, .wbm-hub *::after { box-sizing: border-box; }
+
+  .wbm-hub h1, .wbm-hub h2, .wbm-hub h3 {
+    font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+    font-weight: 300;
+    color: var(--ink);
+    letter-spacing: 0.5px;
+    margin: 0 0 16px;
+    line-height: 1.15;
+  }
+  .wbm-hub h1 { font-size: clamp(2.6rem, 6vw, 4.8rem); }
+  .wbm-hub h2 { font-size: clamp(1.8rem, 3.5vw, 2.6rem); }
+  .wbm-hub h3 { font-size: 1.3rem; margin-top: 28px; }
+  .wbm-hub p { margin: 0 0 16px; color: var(--ink); }
+  .wbm-hub a {
+    color: var(--sky-ink);
+    text-decoration: none;
+    border-bottom: 1px solid var(--sky-deep);
+    transition: opacity .2s;
+  }
+  .wbm-hub a:hover { opacity: 0.6; }
+  .wbm-hub em { color: var(--muted); font-style: italic; }
+  .wbm-hub .inner { max-width: 980px; margin: 0 auto; padding: 0 24px; }
+
+  /* ===== HERO with image ===== */
+  .wbm-hero {
+    position: relative;
+    height: clamp(420px, 60vh, 620px);
+    overflow: hidden;
+    margin-bottom: 0;
+  }
+  .wbm-hero-img {
+    position: absolute;
+    inset: 0;
+    background-image: url('https://cdn.shopify.com/s/files/1/0622/3921/1671/files/hero.jpg?v=1776293586'); /* REPLACE_IMAGE_1: hero — cadets celebrating, hat toss, or graduation moment */
+    background-size: cover;
+    background-position: center 30%;
+  }
+  .wbm-hero-img::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(44,74,107,0.35) 0%, rgba(44,74,107,0.55) 100%);
+  }
+  .wbm-hero-text {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    padding: 0 24px;
+  }
+  .wbm-hero-text .eyebrow {
+    font-size: 0.78rem;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: #fff;
+    opacity: 0.9;
+    margin-bottom: 28px;
+  }
+  .wbm-hero-text h1 {
+    color: #fff;
+    margin: 0 0 24px;
+    font-weight: 300;
+    text-shadow: 0 2px 30px rgba(0,0,0,0.3);
+  }
+  .wbm-hero-text .lead {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-style: italic;
+    font-size: clamp(1.15rem, 2.2vw, 1.5rem);
+    color: #fff;
+    max-width: 620px;
+    margin: 0;
+    line-height: 1.5;
+    opacity: 0.95;
+  }
+
+  /* ===== Date strip ===== */
+  .wbm-dates {
+    text-align: center;
+    padding: 48px 24px;
+    background: var(--soft-bg);
+    margin-bottom: 80px;
+  }
+  .wbm-dates .label {
+    font-size: 0.72rem;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--sky-ink);
+    margin-bottom: 28px;
+    display: block;
+    font-weight: 500;
+  }
+  .wbm-date-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 56px; }
+  .wbm-date-block { min-width: 220px; }
+  .wbm-date-name {
+    font-size: 0.72rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 12px;
+    display: block;
+  }
+  .wbm-date-value {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 1.6rem;
+    color: var(--sky-ink);
+    font-weight: 400;
+  }
+
+  /* ===== Tabs ===== */
+  .wbm-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-bottom: 1px solid var(--line);
+    max-width: 980px;
+    margin: 0 auto;
+  }
+  .wbm-tab-btn {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+    padding: 20px 26px;
+    font-size: 0.72rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-family: inherit;
+    transition: all .25s ease;
+    margin-bottom: -1px;
+  }
+  .wbm-tab-btn:hover { color: var(--sky-ink); }
+  .wbm-tab-btn.is-active { color: var(--sky-ink); border-bottom-color: var(--sky-deep); }
+
+  .wbm-panel { display: none; padding: 64px 24px 32px; max-width: 980px; margin: 0 auto; animation: wbmFade .4s ease; }
+  .wbm-panel.is-active { display: block; }
+  @keyframes wbmFade { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+
+  .wbm-panel h2 { text-align: center; margin-bottom: 8px; }
+  .wbm-panel .timeslot {
+    text-align: center;
+    color: var(--sky-ink);
+    font-style: italic;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 1.2rem;
+    margin-bottom: 28px;
+  }
+  .wbm-panel .panel-intro {
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto 40px;
+  }
+
+  /* ===== Section image (in panels) ===== */
+  .wbm-panel-img {
+    width: 100%;
+    height: clamp(260px, 38vw, 420px);
+    background-size: cover;
+    background-position: center;
+    margin: 0 0 48px;
+    border-radius: 2px;
+  }
+  .wbm-img-parade { background-image: url('https://cdn.shopify.com/s/files/1/0622/3921/1671/files/1000w_q95_1_5b68869b-b06f-49ac-8cac-d8cff6a991de.webp?v=1776295143'); } /* REPLACE_IMAGE_2: parade or cadets in formation */
+  .wbm-img-grad { background-image: url('https://cdn.shopify.com/s/files/1/0622/3921/1671/files/2025Grad1.jpg?v=1776294133'); } /* REPLACE_IMAGE_3: graduation ceremony, flyover, or stadium */
+  .wbm-img-whattodo { background-image: url('https://cdn.shopify.com/s/files/1/0622/3921/1671/files/Untitled_Project_-_image.png?v=1776295692'); } /* REPLACE_IMAGE_4: Colorado Springs landscape or cadet with family */
+  .wbm-img-party { background-image: url('https://cdn.shopify.com/s/files/1/0622/3921/1671/files/2025Parade3.jpg?v=1776294732'); } /* REPLACE_IMAGE_5: celebration, cake, decor */
+
+  /* ===== Detail rows ===== */
+  .wbm-details { max-width: 680px; margin: 0 auto 40px; }
+  .wbm-detail-row {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 24px;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .wbm-detail-row:first-child { border-top: 1px solid var(--line); }
+  .wbm-detail-label {
+    font-size: 0.7rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--sky-ink);
+    padding-top: 4px;
+    font-weight: 500;
+  }
+
+  /* ===== Squadron finder — feature it more ===== */
+  .wbm-finder {
+    max-width: 580px;
+    margin: 56px auto;
+    padding: 48px 36px;
+    background: var(--sky);
+    text-align: center;
+    border-radius: 2px;
+  }
+  .wbm-finder h3 { margin: 0 0 8px; color: var(--sky-ink); font-size: 1.6rem; }
+  .wbm-finder .finder-sub {
+    color: var(--sky-ink);
+    font-style: italic;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 1.15rem;
+    margin-bottom: 28px;
+    opacity: 0.85;
+  }
+  .wbm-finder label {
+    display: block;
+    font-size: 0.7rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--sky-ink);
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .wbm-finder select {
+    width: 100%;
+    padding: 16px 18px;
+    font-size: 0.95rem;
+    border: 1px solid rgba(44,74,107,0.2);
+    background: #fff;
+    font-family: inherit;
+    color: var(--ink);
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%232c4a6b' d='M6 8L0 0h12z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 18px center;
+    cursor: pointer;
+    border-radius: 2px;
+  }
+  .wbm-finder select:focus { outline: none; border-color: var(--sky-ink); }
+
+  .wbm-result {
+    display: none;
+    margin-top: 28px;
+    padding: 24px;
+    background: #fff;
+    border-radius: 2px;
+    text-align: left;
+  }
+  .wbm-result-row {
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    gap: 16px;
+    padding: 8px 0;
+  }
+  .wbm-result-row .lbl {
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--sky-ink);
+    padding-top: 3px;
+    font-weight: 500;
+  }
+
+  /* ===== Notes ===== */
+  .wbm-note {
+    max-width: 680px;
+    margin: 32px auto;
+    padding: 24px 28px;
+    background: var(--warm);
+    text-align: center;
+    font-style: italic;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 1.2rem;
+    color: var(--ink);
+    border-radius: 2px;
+  }
+  .wbm-note strong { font-style: normal; font-weight: 500; color: var(--sky-ink); }
+
+  /* ===== Lists ===== */
+  .wbm-list-wrap { max-width: 520px; margin: 32px auto; }
+  .wbm-list-wrap h3 { text-align: center; margin-bottom: 24px; }
+  .wbm-list { list-style: none; padding: 0; margin: 0; }
+  .wbm-list li {
+    padding: 14px 0;
+    border-bottom: 1px solid var(--line);
+    text-align: center;
+  }
+  .wbm-list li:last-child { border-bottom: none; }
+
+  /* ===== Button ===== */
+  .wbm-btn-wrap { text-align: center; margin: 36px 0; }
+  .wbm-btn {
+    display: inline-block;
+    background: var(--sky-ink);
+    color: #fff !important;
+    padding: 18px 42px;
+    text-decoration: none !important;
+    font-size: 0.72rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    border: none !important;
+    transition: background .25s;
+    border-radius: 2px;
+  }
+  .wbm-btn:hover { background: var(--sky-deep); opacity: 1; }
+
+  .wbm-divider {
+    border: none;
+    border-top: 1px solid var(--line);
+    margin: 64px auto;
+    max-width: 80px;
+  }
+
+  .wbm-section-heading { text-align: center; margin: 56px 0 24px; }
+
+  /* ===== Final CTA ===== */
+  .wbm-cta {
+    position: relative;
+    text-align: center;
+    padding: 100px 24px;
+    margin-top: 80px;
+    overflow: hidden;
+    background-image: url('https://cdn.shopify.com/s/files/1/0622/3921/1671/files/footer.jpg?v=1776294037'); /* REPLACE_IMAGE_6 (optional): cadet/grad portrait or Wild Blue product hero */
+    background-size: cover;
+    background-position: center;
+  }
+  .wbm-cta::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(44,74,107,0.7) 0%, rgba(44,74,107,0.85) 100%);
+  }
+  .wbm-cta > * { position: relative; z-index: 2; }
+  .wbm-cta .eyebrow {
+    display: block;
+    font-size: 0.78rem;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: #fff;
+    opacity: 0.9;
+    margin-bottom: 24px;
+  }
+  .wbm-cta h2 { color: #fff; margin-bottom: 20px; font-size: clamp(2rem, 4vw, 3rem); }
+  .wbm-cta p {
+    color: #fff;
+    max-width: 540px;
+    margin: 0 auto 36px;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 1.35rem;
+    font-style: italic;
+    line-height: 1.5;
+    opacity: 0.95;
+  }
+  .wbm-cta .wbm-btn { background: #fff; color: var(--sky-ink) !important; }
+  .wbm-cta .wbm-btn:hover { background: var(--warm); color: var(--sky-ink) !important; }
+
+  /* ===== Doc preview images ===== */
+  .wbm-doc-preview {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+    margin: 0 auto 32px;
+    max-width: 680px;
+  }
+  .wbm-doc-preview img {
+    width: calc(50% - 8px);
+    min-width: 200px;
+    border-radius: 2px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+    display: block;
+  }
+
+  @media (max-width: 640px) {
+    .wbm-tab-btn { padding: 14px 12px; font-size: 0.65rem; letter-spacing: 2px; }
+    .wbm-detail-row, .wbm-result-row { grid-template-columns: 1fr; gap: 4px; }
+    .wbm-date-row { gap: 32px; }
+    .wbm-hero-text .eyebrow { letter-spacing: 4px; font-size: 0.68rem; }
+    .wbm-doc-preview img { width: 100%; }
+  }
+</style>
+
+<div class="wbm-hub">
+
+  <!-- HERO -->
+  <div class="wbm-hero">
+    <div class="wbm-hero-img"></div>
+    <div class="wbm-hero-text">
+      <span class="eyebrow">Class of 2026 · USAFA</span>
+      <h1>The Moment Arrives</h1>
+      <p class="lead">Four years of grit, sacrifice, and discovery — culminating in one unforgettable week. Here's everything you need to be there for it.</p>
+    </div>
+  </div>
+
+  <!-- DATES -->
+  <div class="wbm-dates">
+    <span class="label">Graduation Week</span>
+    <div class="wbm-date-row">
+      <div class="wbm-date-block">
+        <span class="wbm-date-name"> Parade & Commissioning</span>
+        <span class="wbm-date-value">Wednesday, May 27, 2026</span>
+      </div>
+      <div class="wbm-date-block">
+        <span class="wbm-date-name">Graduation Ceremony</span>
+        <span class="wbm-date-value">Thursday, May 28, 2026</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- TABS -->
+  <div class="wbm-tabs">
+    <button class="wbm-tab-btn is-active" data-tab="parade">Parade · Commissioning</button>
+    <button class="wbm-tab-btn" data-tab="graduation">Graduation</button>
+    <button class="wbm-tab-btn" data-tab="whattodo">What To Do</button>
+    <button class="wbm-tab-btn" data-tab="party">Party · Resources</button>
+  </div>
+
+  <!-- PARADE PANEL -->
+  <div class="wbm-panel is-active" id="wbm-parade">
+    <div class="wbm-panel-img wbm-img-parade"></div>
+
+    <h2>The Graduation Parade</h2>
+    <p class="timeslot">7:30 – 10:30 AM · Wednesday, May 27</p>
+    <p class="panel-intro">The day opens with cadets in full formation on Stillman Field — a tradition over six decades in the making. Bring your camera; this one's for the family album.</p>
+
+    <div class="wbm-details">
+      <div class="wbm-detail-row"><div class="wbm-detail-label">Location</div><div>Stillman Field</div></div>
+      <div class="wbm-detail-row"><div class="wbm-detail-label">Attire</div><div>Spring or business casual. Comfortable walking shoes are mandatory. Dress in layers — Colorado mornings can be chilly.</div></div>
+      <div class="wbm-detail-row"><div class="wbm-detail-label">Tips</div><div>Arrive early; seating fills fast. Bring clear water bottles, sunglasses, and sunscreen. Expect significant walking from parking to the field.</div></div>
+    </div>
+
+    <hr class="wbm-divider">
+
+    <div class="wbm-section-heading">
+      <h2>Commissioning Ceremonies</h2>
+      <p class="timeslot">Afternoon & Evening · Wednesday, May 27</p>
+    </div>
+    <p class="panel-intro">The moment your cadet raises their right hand and becomes a Second Lieutenant in the U.S. Air Force or Space Force. Goosebumps guaranteed.</p>
+
+    <div class="wbm-finder">
+      <h3>Find Your Commissioning</h3>
+      <p class="finder-sub">Select your cadet's squadron to see when and where they'll commission.</p>
+      <label for="wbm-squadron">Cadet Squadron</label>
+      <select id="wbm-squadron">
+        <option value="">— Select a Squadron —</option>
+      </select>
+      <div class="wbm-result" id="wbm-result"></div>
+    </div>
+
+    <div class="wbm-details">
+      <div class="wbm-detail-row"><div class="wbm-detail-label">Location</div><div>Varies by squadron — use the tool above</div></div>
+      <div class="wbm-detail-row"><div class="wbm-detail-label">Attire</div><div>Business formal or black tie for guests</div></div>
+      <div class="wbm-detail-row"><div class="wbm-detail-label">Tips</div><div>Allow plenty of transit time between the morning Parade and afternoon or evening Commissioning. Note your indoor backup location if your squadron is scheduled outside.</div></div>
+    </div>
+  </div>
+
+  <!-- GRADUATION PANEL -->
+  <div class="wbm-panel" id="wbm-graduation">
+    <div class="wbm-panel-img wbm-img-grad"></div>
+
+    <h2>The Graduation Ceremony</h2>
+    <p class="timeslot">9:00 AM – 1:00 PM · Thursday, May 28</p>
+    <p class="panel-intro">The main event. Falcon Stadium fills with 30,000 family members, friends, and dignitaries. Caps fly. Thunderbirds roar overhead. Four years become a lifetime.</p>
+
+    <div class="wbm-details">
+      <div class="wbm-detail-row"><div class="wbm-detail-label">Location</div><div>Falcon Stadium</div></div>
+      <div class="wbm-detail-row"><div class="wbm-detail-label">Attire</div><div>Layers are vital. Weather can shift from intense sun to rain or wind quickly. Comfortable shoes recommended.</div></div>
+      <div class="wbm-detail-row"><div class="wbm-detail-label">Tips</div><div>Expect heavy traffic and arrive hours early — gates open at 6 AM. Follow the stadium packing list exactly to avoid being turned away.</div></div>
+    </div>
+
+<div class="wbm-note">
+      <strong>Important —</strong> only clear bags are allowed for stadium entry.
+    </div>
+
+    <div class="wbm-list-wrap">
+      <h3>Stadium Packing List</h3>
+      <ul class="wbm-list">
+        <li>Clear bag (required)</li>
+        <li>Sunscreen</li>
+        <li>Chapstick</li>
+        <li>Hand fans (if hot)</li>
+        <li>Poncho</li>
+        <li>Mints</li>
+        <li>Snacks — trail mix (Permitted in one clear ziploc bag)</li>
+        <li>Sealed water bottle</li>
+      </ul>
+    </div>
+
+    <div class="wbm-btn-wrap"><a href="https://amzn.to/4nnqbjs" target="_blank" rel="noopener" class="wbm-btn">Shop the Packing List</a></div>
+  </div>
+
+  <!-- WHAT TO DO PANEL -->
+  <div class="wbm-panel" id="wbm-whattodo">
+    <div class="wbm-panel-img wbm-img-whattodo"></div>
+
+    <h2>What To Do</h2>
+    <p class="panel-intro">Between ceremonies, take your cadet somewhere they've been dreaming about for months. Visit our <a href="https://wildbluemerch.com/pages/the-recon-report">Wild Blue Experiences</a> guide for cadet-favorite restaurants and local activities around Colorado Springs.</p>
+
+    <div class="wbm-list-wrap">
+      <h3>Cadet Gift Ideas</h3>
+      <ul class="wbm-list">
+        <li>Custom engraved keepsakes</li>
+        <li>Shadow boxes for commissioning memorabilia</li>
+        <li>Travel gear for their 60-day vacation</li>
+      </ul>
+    </div>
+  </div>
+
+<!-- PARTY PANEL -->
+  <div class="wbm-panel" id="wbm-party">
+    <div class="wbm-panel-img wbm-img-party"></div>
+
+    <h2>Party Planning</h2>
+    <p class="panel-intro">Highly-rated party essentials for an Air Force colors themed celebration, sourced directly from Amazon.</p>
+
+    <div class="wbm-btn-wrap"><a href="https://amzn.to/4twVLwy" target="_blank" rel="noopener" class="wbm-btn">Shop the Full Party Package</a></div>
+
+
+<hr class="wbm-divider">
+
+    <div class="wbm-section-heading"><h2>Share Your Cadet's Journey</h2></div>
+    <p class="panel-intro">Download our editable template, fill in your cadet's specific event times, and share with your party. Print as a pamphlet and tuck into a clear goodie bag with your stadium essentials — everyone arrives prepared.</p>
+
+    <div class="wbm-note">
+      Text in red is for you — type in names and dates, then change the text to black for a polished, print-ready booklet. Best edited on the desktop, not mobile.
+    </div>
+
+    <div class="wbm-doc-preview">
+      <img src="https://cdn.shopify.com/s/files/1/0622/3921/1671/files/Example_Booklet_page_1.jpg?v=1776818014" alt="Grad booklet preview — cover page" loading="lazy">
+    </div>
+
+    <div class="wbm-btn-wrap" style="display: flex; flex-wrap: wrap; gap: 16px; justify-content: center;">
+      <a href="https://cdn.shopify.com/s/files/1/0622/3921/1671/files/2026_USAFA_Grad_Booklet_Template_Word_Doc.docx?v=1778637842" class="wbm-btn" onclick="wbmTrack('booklet_download', 'word_doc')">Download Word Doc</a>
+      <a href="https://docs.google.com/document/d/1lOK5IAcGGbBAnz4HjSXlzzeCbD-xFZh98fMuS18yDbs/copy" target="_blank" rel="noopener" class="wbm-btn" onclick="wbmTrack('booklet_open', 'google_docs')">Open in Google Docs</a>
+    </div>
+
+    <hr class="wbm-divider">
+
+    <p class="panel-intro">For the full official schedule, visit <a href="https://www.usafa.edu/graduation/" target="_blank" rel="noopener">usafa.edu/graduation</a>.</p>
+  </div>
+
+  <!-- FINAL CTA -->
+  <div class="wbm-cta">
+    <span class="eyebrow">Wear Our Legacy</span>
+    <h2>A Day Worth Remembering</h2>
+    <p>Mark this milestone with custom Wild Blue Merch gear unique to your graduate.</p>
+    <div class="wbm-btn-wrap"><a href="https://wildbluemerch.com/collections/graduation-merch" class="wbm-btn">Shop Graduation Collection</a></div>
+  </div>
+
+</div>
+
+<script>
+// Fires a GA4 event. Safe no-op if gtag isn't loaded (e.g., preview mode).
+function wbmTrack(eventName, method) {
+  if (typeof gtag === 'function') {
+    gtag('event', eventName, { method: method, page_location: window.location.href });
+  }
+}
+
+(function() {
+  var root = document.querySelector('.wbm-hub');
+  if (!root) return;
+
+  var btns = root.querySelectorAll('.wbm-tab-btn');
+  var panels = root.querySelectorAll('.wbm-panel');
+  btns.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var tab = btn.getAttribute('data-tab');
+      btns.forEach(function(b) { b.classList.remove('is-active'); });
+      panels.forEach(function(p) { p.classList.remove('is-active'); });
+      btn.classList.add('is-active');
+      var panel = root.querySelector('#wbm-' + tab);
+      if (panel) panel.classList.add('is-active');
+    });
+  });
+
+  var commissioningData = {
+    "CS-01": { time: "2:00 PM – 3:30 PM", location: "Falcon Club Ballroom" },
+    "CS-02": { time: "4:30 PM – 6:00 PM", location: "Thunderbird Overlook (Backup: D2, Fairchild Hall)" },
+    "CS-03": { time: "7:00 PM – 8:30 PM", location: "Hotel Polaris — Constellations 3 & 4" },
+    "CS-04": { time: "7:00 PM – 8:30 PM", location: "Doolittle Hall" },
+    "CS-05": { time: "4:30 PM – 6:00 PM", location: "Clune Arena" },
+    "CS-06": { time: "4:30 PM – 6:00 PM", location: "B-52 Display (Backup: F1, Fairchild Hall)" },
+    "CS-07": { time: "2:00 PM – 3:30 PM", location: "Doolittle Hall" },
+    "CS-08": { time: "2:00 PM – 3:30 PM", location: "Arnold Hall Ballroom" },
+    "CS-09": { time: "4:30 PM – 6:00 PM", location: "Arnold Hall Theater" },
+    "CS-10": { time: "4:30 PM – 6:00 PM", location: "Polaris Hall" },
+    "CS-11": { time: "4:30 PM – 6:00 PM", location: "Blue and Silver Club, Stadium" },
+    "CS-12": { time: "2:00 PM – 3:30 PM", location: "Ground Training Facility" },
+    "CS-13": { time: "4:30 PM – 6:00 PM", location: "East Club, Stadium" },
+    "CS-14": { time: "3:00 PM – 4:30 PM", location: "Hotel Polaris — Constellations 1 & 2" },
+    "CS-15": { time: "5:30 PM – 7:00 PM", location: "Hotel Polaris — Generations B" },
+    "CS-16": { time: "2:00 PM – 3:30 PM", location: "Hotel Polaris — Generations C" },
+    "CS-17": { time: "7:00 PM – 8:30 PM", location: "Hotel Polaris — Generations C" },
+    "CS-18": { time: "2:00 PM – 3:30 PM", location: "Hotel Polaris — Constellations 3 & 4" },
+    "CS-19": { time: "7:00 PM – 8:30 PM", location: "Ground Training Facility" },
+    "CS-20": { time: "2:00 PM – 3:30 PM", location: "Clune Arena" },
+    "CS-21": { time: "4:30 PM – 6:00 PM", location: "Doolittle Hall" },
+    "CS-22": { time: "4:30 PM – 6:00 PM", location: "Arnold Hall Ballroom" },
+    "CS-23": { time: "7:00 PM – 8:30 PM", location: "Arnold Hall Ballroom" },
+    "CS-24": { time: "7:00 PM – 8:30 PM", location: "F1, Fairchild Hall" },
+    "CS-25": { time: "4:30 PM – 6:00 PM", location: "Ground Training Facility" },
+    "CS-26": { time: "2:00 PM – 3:30 PM", location: "F1, Fairchild Hall" },
+    "CS-27": { time: "7:00 PM – 8:30 PM", location: "Polaris Hall" },
+    "CS-28": { time: "2:00 PM – 3:30 PM", location: "McDermott Library" },
+    "CS-29": { time: "2:00 PM – 3:30 PM", location: "Arnold Hall Theater" },
+    "CS-30": { time: "7:00 PM – 8:30 PM", location: "Falcon Club Ballroom" },
+    "CS-31": { time: "2:00 PM – 3:30 PM", location: "Polaris Hall" },
+    "CS-32": { time: "3:00 PM – 4:30 PM", location: "Hotel Polaris — Generations B" },
+    "CS-33": { time: "4:30 PM – 6:00 PM", location: "Hotel Polaris — Generations C" },
+    "CS-34": { time: "7:00 PM – 8:30 PM", location: "Clune Arena" },
+    "CS-35": { time: "5:30 PM – 7:00 PM", location: "Hotel Polaris — Constellations 1 & 2" },
+    "CS-36": { time: "7:00 PM – 8:30 PM", location: "Arnold Hall Theater" },
+    "CS-37": { time: "7:00 PM – 8:30 PM", location: "Blue and Silver Club, Stadium" },
+    "CS-38": { time: "7:00 PM – 8:30 PM", location: "East Club, Stadium" },
+    "CS-39": { time: "4:30 PM – 6:00 PM", location: "Falcon Club Ballroom" },
+    "CS-40": { time: "4:30 PM – 6:00 PM", location: "Hotel Polaris — Constellations 3 & 4" }
+  };
+
+  var select = root.querySelector('#wbm-squadron');
+  if (select) {
+    for (var i = 1; i <= 40; i++) {
+      var sq = i < 10 ? "0" + i : "" + i;
+      var opt = document.createElement('option');
+      opt.value = "CS-" + sq;
+      opt.textContent = "Cadet Squadron " + sq;
+      select.appendChild(opt);
+    }
+    var resultDiv = root.querySelector('#wbm-result');
+    select.addEventListener('change', function() {
+      var sq = select.value;
+      if (!sq) { resultDiv.style.display = 'none'; return; }
+      resultDiv.style.display = 'block';
+      var info = commissioningData[sq];
+      if (info) {
+        resultDiv.innerHTML =
+          '<div class="wbm-result-row"><div class="lbl">Squadron</div><div>' + sq + '</div></div>' +
+          '<div class="wbm-result-row"><div class="lbl">Date</div><div>Wednesday, May 27, 2026</div></div>' +
+          '<div class="wbm-result-row"><div class="lbl">Time</div><div>' + info.time + '</div></div>' +
+          '<div class="wbm-result-row"><div class="lbl">Location</div><div>' + info.location + '</div></div>';
+      } else {
+        resultDiv.innerHTML =
+          '<div class="wbm-result-row"><div class="lbl">Squadron</div><div>' + sq + '</div></div>' +
+          '<div class="wbm-result-row"><div class="lbl">Date</div><div>Wednesday, May 27, 2026</div></div>' +
+          '<div class="wbm-result-row"><div class="lbl">Details</div><div><em>To be announced by USAFA</em></div></div>';
+      }
+    });
+  }
+})();
+</script>
