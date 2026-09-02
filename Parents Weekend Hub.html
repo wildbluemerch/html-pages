@@ -1,0 +1,1155 @@
+<!-- Google Tag (loads gtag for GA4 event tracking) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=GT-MRM476T8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+  gtag('config', 'GT-MRM476T8');
+</script>
+
+<!-- =========================================================
+     WILD BLUE MERCH — Parents' Weekend Hub
+     Paste into a Shopify Page (Source code view) or Custom Liquid
+
+     IMAGES: 3 photos are used below (hero, Friday panel, Saturday panel).
+       - hero  ......... XT514111.jpg
+       - Friday panel .. 2-DSC02312.jpg
+       - Saturday panel  IMG_1065.heic   <-- NOTE: .heic files do NOT
+         display in most browsers (Chrome, Firefox, Edge). Before this
+         page goes live, open Shopify Admin > Content > Files, upload a
+         .jpg or .webp version of this photo, and replace the URL marked
+         "HEIC_SWAP" below.
+     Product image on "The USAFA Shirt" tab is pulled from the live
+     product listing.
+     ========================================================= -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&display=swap"
+  rel="stylesheet">
+
+<style>
+  .wbm-hub {
+    --ink: #2a2a2a;
+    --muted: #8a8a8a;
+    --line: #e8e6e2;
+    --soft-bg: #f5f3ef;
+    --sky: #c8d8e4;
+    --sky-deep: #6b8caa;
+    --sky-ink: #2c4a6b;
+    --warm: #e8d9c4;
+
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 0 80px;
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.75;
+    font-weight: 300;
+    box-sizing: border-box;
+  }
+
+  .wbm-hub *,
+  .wbm-hub *::before,
+  .wbm-hub *::after {
+    box-sizing: border-box;
+  }
+
+  .wbm-hub h1,
+  .wbm-hub h2,
+  .wbm-hub h3 {
+    font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+    font-weight: 300;
+    color: var(--ink);
+    letter-spacing: 0.5px;
+    margin: 0 0 16px;
+    line-height: 1.15;
+  }
+
+  .wbm-hub h1 {
+    font-size: clamp(2.6rem, 6vw, 4.8rem);
+  }
+
+  .wbm-hub h2 {
+    font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  }
+
+  .wbm-hub h3 {
+    font-size: 1.3rem;
+    margin-top: 28px;
+  }
+
+  .wbm-hub p {
+    margin: 0 0 16px;
+    color: var(--ink);
+  }
+
+  .wbm-hub a {
+    color: var(--sky-ink);
+    text-decoration: none;
+    border-bottom: 1px solid var(--sky-deep);
+    transition: opacity .2s;
+  }
+
+  .wbm-hub a:hover {
+    opacity: 0.6;
+  }
+
+  .wbm-hub em {
+    color: var(--muted);
+    font-style: italic;
+  }
+
+  .wbm-hub .inner {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* ===== HERO with image ===== */
+  .wbm-hero {
+    position: relative;
+    height: clamp(420px, 60vh, 620px);
+    overflow: hidden;
+    margin-bottom: 0;
+  }
+
+  .wbm-hero-img {
+    position: absolute;
+    inset: 0;
+    background-image: url('https://cdn.shopify.com/s/files/1/0622/3921/1671/files/XT514111.jpg?v=1788323410');
+    background-size: cover;
+    background-position: center 35%;
+  }
+
+  .wbm-hero-img::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(44, 74, 107, 0.35) 0%, rgba(44, 74, 107, 0.55) 100%);
+  }
+
+  .wbm-hero-text {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    padding: 0 24px;
+  }
+
+  .wbm-hero-text .eyebrow {
+    font-size: 0.78rem;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: #fff;
+    opacity: 0.9;
+    margin-bottom: 28px;
+  }
+
+  .wbm-hero-text h1 {
+    color: #fff;
+    margin: 0 0 24px;
+    font-weight: 300;
+    text-shadow: 0 2px 30px rgba(0, 0, 0, 0.3);
+  }
+
+  .wbm-hero-text .lead {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-style: italic;
+    font-size: clamp(1.15rem, 2.2vw, 1.5rem);
+    color: #fff;
+    max-width: 620px;
+    margin: 0;
+    line-height: 1.5;
+    opacity: 0.95;
+  }
+
+  /* ===== Date strip ===== */
+  .wbm-dates {
+    text-align: center;
+    padding: 48px 24px;
+    background: var(--soft-bg);
+    margin-bottom: 0;
+  }
+
+  .wbm-dates .label {
+    font-size: 0.72rem;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--sky-ink);
+    margin-bottom: 28px;
+    display: block;
+    font-weight: 500;
+  }
+
+  .wbm-date-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 56px;
+  }
+
+  .wbm-date-block {
+    min-width: 220px;
+  }
+
+  .wbm-date-name {
+    font-size: 0.72rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 12px;
+    display: block;
+  }
+
+  .wbm-date-value {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 1.6rem;
+    color: var(--sky-ink);
+    font-weight: 400;
+  }
+
+  /* ===== Where to find us ===== */
+  .wbm-find {
+    background: var(--soft-bg);
+    padding: 8px 24px 64px;
+    margin-bottom: 80px;
+  }
+
+  .wbm-find h2 {
+    text-align: center;
+    margin-bottom: 8px;
+  }
+
+  .wbm-find .find-sub {
+    text-align: center;
+    color: var(--sky-ink);
+    font-style: italic;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 1.2rem;
+    margin-bottom: 36px;
+  }
+
+  .wbm-loc-grid {
+    max-width: 860px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+  }
+
+  .wbm-loc-card {
+    background: var(--sky);
+    padding: 36px 30px;
+    border-radius: 2px;
+    text-align: center;
+  }
+
+  .wbm-loc-card .day {
+    font-size: 0.7rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--sky-ink);
+    font-weight: 500;
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .wbm-loc-card h3 {
+    color: var(--sky-ink);
+    margin: 0 0 14px;
+    font-size: 1.5rem;
+  }
+
+  .wbm-loc-card .where {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 1.15rem;
+    color: var(--sky-ink);
+    margin-bottom: 6px;
+  }
+
+  .wbm-loc-card .when {
+    font-size: 0.72rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--sky-ink);
+    font-weight: 500;
+  }
+
+  .wbm-loc-card .fine {
+    display: block;
+    margin-top: 12px;
+    font-size: 0.85rem;
+    color: var(--sky-ink);
+    opacity: 0.8;
+    font-style: italic;
+    letter-spacing: 0;
+    text-transform: none;
+    font-weight: 300;
+  }
+
+  /* ===== Tabs ===== */
+  .wbm-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-bottom: 1px solid var(--line);
+    max-width: 980px;
+    margin: 0 auto;
+  }
+
+  .wbm-tab-btn {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+    padding: 20px 26px;
+    font-size: 0.72rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-family: inherit;
+    transition: all .25s ease;
+    margin-bottom: -1px;
+  }
+
+  .wbm-tab-btn:hover {
+    color: var(--sky-ink);
+  }
+
+  .wbm-tab-btn.is-active {
+    color: var(--sky-ink);
+    border-bottom-color: var(--sky-deep);
+  }
+
+  .wbm-panel {
+    display: none;
+    padding: 64px 24px 32px;
+    max-width: 980px;
+    margin: 0 auto;
+    animation: wbmFade .4s ease;
+  }
+
+  .wbm-panel.is-active {
+    display: block;
+  }
+
+  @keyframes wbmFade {
+    from {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  .wbm-panel h2 {
+    text-align: center;
+    margin-bottom: 8px;
+  }
+
+  .wbm-panel .timeslot {
+    text-align: center;
+    color: var(--sky-ink);
+    font-style: italic;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 1.2rem;
+    margin-bottom: 28px;
+  }
+
+  .wbm-panel .panel-intro {
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto 40px;
+  }
+
+  /* ===== Section image (in panels) ===== */
+  .wbm-panel-img {
+    width: 100%;
+    height: clamp(260px, 38vw, 420px);
+    background-size: cover;
+    background-position: center;
+    margin: 0 0 48px;
+    border-radius: 2px;
+  }
+
+  .wbm-img-friday {
+    background-image: url('https://cdn.shopify.com/s/files/1/0622/3921/1671/files/2-DSC02312.jpg?v=1788222049');
+  }
+
+  /* HEIC_SWAP: replace the URL below with a .jpg/.webp copy of IMG_1065 */
+  .wbm-img-saturday {
+    background-image: url('https://cdn.shopify.com/s/files/1/0622/3921/1671/files/IMG_1061.jpg?v=1788325183');
+    background-color: var(--sky);
+  }
+
+  /* ===== Detail rows ===== */
+  .wbm-details {
+    max-width: 680px;
+    margin: 0 auto 40px;
+  }
+
+  .wbm-detail-row {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 24px;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .wbm-detail-row:first-child {
+    border-top: 1px solid var(--line);
+  }
+
+  .wbm-detail-label {
+    font-size: 0.7rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--sky-ink);
+    padding-top: 4px;
+    font-weight: 500;
+  }
+
+  /* ===== Schedule list ===== */
+  .wbm-sched {
+    max-width: 720px;
+    margin: 0 auto 32px;
+  }
+
+  .wbm-sched-day {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 1.5rem;
+    color: var(--sky-ink);
+    margin: 40px 0 10px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .wbm-sched-day:first-child {
+    margin-top: 0;
+  }
+
+  .wbm-sched-row {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 20px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .wbm-sched-row .t {
+    font-size: 0.72rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--sky-ink);
+    font-weight: 500;
+    padding-top: 3px;
+  }
+
+  .wbm-sched-row.is-wbm {
+    background: var(--sky);
+    margin: 0 -12px;
+    padding: 12px;
+    border-radius: 2px;
+    border-bottom: none;
+  }
+
+  .wbm-sched-row .loc {
+    display: block;
+    color: var(--muted);
+    font-size: 0.9rem;
+  }
+
+  /* ===== Notes ===== */
+  .wbm-note {
+    max-width: 680px;
+    margin: 32px auto;
+    padding: 24px 28px;
+    background: var(--warm);
+    text-align: center;
+    font-style: italic;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 1.2rem;
+    color: var(--ink);
+    border-radius: 2px;
+  }
+
+  .wbm-note strong {
+    font-style: normal;
+    font-weight: 500;
+    color: var(--sky-ink);
+  }
+
+  /* ===== Lists ===== */
+  .wbm-list-wrap {
+    max-width: 520px;
+    margin: 32px auto;
+  }
+
+  .wbm-list-wrap h3 {
+    text-align: center;
+    margin-bottom: 24px;
+  }
+
+  .wbm-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .wbm-list li {
+    padding: 14px 0;
+    border-bottom: 1px solid var(--line);
+    text-align: center;
+  }
+
+  .wbm-list li:last-child {
+    border-bottom: none;
+  }
+
+  /* ===== Give-back cards ===== */
+  .wbm-give {
+    max-width: 680px;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .wbm-give-card {
+    background: var(--soft-bg);
+    padding: 32px 26px;
+    text-align: center;
+    border-radius: 2px;
+  }
+
+  .wbm-give-card .amt {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 2.4rem;
+    color: var(--sky-ink);
+    display: block;
+    line-height: 1.1;
+    margin-bottom: 8px;
+  }
+
+  .wbm-give-card .who {
+    font-size: 0.72rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--sky-ink);
+    font-weight: 500;
+  }
+
+  /* ===== Shirt feature ===== */
+  .wbm-shirt {
+    max-width: 820px;
+    margin: 0 auto 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+    align-items: center;
+  }
+
+  .wbm-shirt img {
+    width: 100%;
+    border-radius: 2px;
+    display: block;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
+  }
+
+  /* ===== Button ===== */
+  .wbm-btn-wrap {
+    text-align: center;
+    margin: 36px 0;
+  }
+
+  .wbm-btn {
+    display: inline-block;
+    background: var(--sky-ink);
+    color: #fff !important;
+    padding: 18px 42px;
+    text-decoration: none !important;
+    font-size: 0.72rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    border: none !important;
+    transition: background .25s;
+    border-radius: 2px;
+  }
+
+  .wbm-btn:hover {
+    background: var(--sky-deep);
+    opacity: 1;
+  }
+
+  .wbm-divider {
+    border: none;
+    border-top: 1px solid var(--line);
+    margin: 64px auto;
+    max-width: 80px;
+  }
+
+  .wbm-section-heading {
+    text-align: center;
+    margin: 56px 0 24px;
+  }
+
+  /* ===== Final CTA ===== */
+  .wbm-cta {
+    position: relative;
+    text-align: center;
+    padding: 100px 24px;
+    margin-top: 80px;
+    overflow: hidden;
+    background-image: url('https://cdn.shopify.com/s/files/1/0622/3921/1671/files/2-DSC02312.jpg?v=1788222049');
+    background-size: cover;
+    background-position: center 30%;
+  }
+
+  .wbm-cta::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(44, 74, 107, 0.7) 0%, rgba(44, 74, 107, 0.85) 100%);
+  }
+
+  .wbm-cta>* {
+    position: relative;
+    z-index: 2;
+  }
+
+  .wbm-cta .eyebrow {
+    display: block;
+    font-size: 0.78rem;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: #fff;
+    opacity: 0.9;
+    margin-bottom: 24px;
+  }
+
+  .wbm-cta h2 {
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: clamp(2rem, 4vw, 3rem);
+  }
+
+  .wbm-cta p {
+    color: #fff;
+    max-width: 540px;
+    margin: 0 auto 36px;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 1.35rem;
+    font-style: italic;
+    line-height: 1.5;
+    opacity: 0.95;
+  }
+
+  .wbm-cta .wbm-btn {
+    background: #fff;
+    color: var(--sky-ink) !important;
+  }
+
+  .wbm-cta .wbm-btn:hover {
+    background: var(--warm);
+    color: var(--sky-ink) !important;
+  }
+
+  @media (max-width: 640px) {
+    .wbm-tab-btn {
+      padding: 14px 12px;
+      font-size: 0.65rem;
+      letter-spacing: 2px;
+    }
+
+    .wbm-detail-row,
+    .wbm-sched-row {
+      grid-template-columns: 1fr;
+      gap: 4px;
+    }
+
+    .wbm-date-row {
+      gap: 32px;
+    }
+
+    .wbm-hero-text .eyebrow {
+      letter-spacing: 4px;
+      font-size: 0.68rem;
+    }
+
+    .wbm-loc-grid,
+    .wbm-give,
+    .wbm-shirt {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<div class="wbm-hub">
+
+  <!-- HERO -->
+  <div class="wbm-hero">
+    <div class="wbm-hero-img"></div>
+    <div class="wbm-hero-text">
+      <span class="eyebrow">Parents' Weekend 2026 · USAFA</span>
+      <h1>Your Weekend Together</h1>
+      <p class="lead">Four days on the grounds with your cadet — parades, open houses, a stadium full of white, and a
+        little more time than a phone call allows. Here's how to make the most of it.</p>
+    </div>
+  </div>
+
+  <!-- DATES -->
+  <div class="wbm-dates">
+    <span class="label">Parents' Weekend · September 2–7, 2026</span>
+    <div class="wbm-date-row">
+      <div class="wbm-date-block">
+        <span class="wbm-date-name">Parade, CAPEX &amp; Info Fair</span>
+        <span class="wbm-date-value">Friday, September 4</span>
+      </div>
+      <div class="wbm-date-block">
+        <span class="wbm-date-name">Tailgate &amp; Whiteout Football</span>
+        <span class="wbm-date-value">Saturday, September 5</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- WHERE TO FIND US -->
+  <div class="wbm-find">
+    <h2>Where to Find Wild Blue Merch</h2>
+    <p class="find-sub">Two stops, two days — come say hi and pick up your USAFA Shirt in person.</p>
+    <div class="wbm-loc-grid">
+      <div class="wbm-loc-card">
+        <span class="day">Friday · September 4</span>
+        <h3>Arnold Hall Info Fair</h3>
+        <p class="where">Arnold Hall Ballroom</p>
+        <p class="when">Find us 10:00 AM – 2:00 PM</p>
+        <span class="fine">Info Fair runs 9:30 AM – 2:00 PM, with food trucks outside.</span>
+      </div>
+      <div class="wbm-loc-card">
+        <span class="day">Saturday · September 5</span>
+        <h3>Football Tailgate</h3>
+        <p class="where">East entrance of Lot 4</p>
+        <p class="when">8:00 AM – 10:00 AM</p>
+        <span class="fine">Right before the 11:00 AM Whiteout kickoff at Falcon Stadium.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- TABS -->
+  <div class="wbm-tabs">
+    <button class="wbm-tab-btn is-active" data-tab="friday">Friday</button>
+    <button class="wbm-tab-btn" data-tab="saturday">Saturday</button>
+    <button class="wbm-tab-btn" data-tab="schedule">Full Schedule</button>
+    <button class="wbm-tab-btn" data-tab="shirt">The USAFA Shirt</button>
+  </div>
+
+  <!-- FRIDAY PANEL -->
+  <div class="wbm-panel is-active" id="wbm-friday">
+    <div class="wbm-panel-img wbm-img-friday"></div>
+
+    <h2>Friday, September 4</h2>
+    <p class="timeslot">The big day on the Terrazzo — parade, demonstrations, and the Info Fair</p>
+    <p class="panel-intro">Mornings in Colorado start cool and warm up fast. Get to Stillman Field early for a good
+      spot, then head to Arnold Hall for the Information Fair and a chance to meet the people behind your cadet's four
+      years.</p>
+
+    <div class="wbm-sched">
+      <div class="wbm-sched-row">
+        <div class="t">7:30 – 7:55 AM</div>
+        <div>Demonstrations — Falconry, Honor Guard, Sabre Drill <span class="loc">Stillman Field</span></div>
+      </div>
+      <div class="wbm-sched-row">
+        <div class="t">8:00 – 8:50 AM</div>
+        <div>Cadet Wing Parade <span class="loc">Stillman Field</span></div>
+      </div>
+      <div class="wbm-sched-row">
+        <div class="t">8:00 – 9:00 AM</div>
+        <div>Prep School Parade <span class="loc">Black Field</span></div>
+      </div>
+      <div class="wbm-sched-row">
+        <div class="t">8:50 – 9:30 AM</div>
+        <div>Cadet Aviation Capabilities Exercise (CAPEX) <span class="loc">Stillman Field</span></div>
+      </div>
+      <div class="wbm-sched-row is-wbm">
+        <div class="t">10:00 AM – 2:00 PM</div>
+        <div><strong>Wild Blue Merch at the Parents' Weekend Information Fair</strong> — pick up your USAFA Shirt <span
+            class="loc">Arnold Hall Ballroom · Fair runs 9:30 AM – 2:00 PM with food trucks</span></div>
+      </div>
+      <div class="wbm-sched-row">
+        <div class="t">11:00 AM – 12:30 PM</div>
+        <div>Senior Leaders' Panel &amp; Parents' Q&amp;A <span class="loc">Arnold Hall Theater</span></div>
+      </div>
+      <div class="wbm-sched-row">
+        <div class="t">1:00 – 4:00 PM</div>
+        <div>Athletic Department Open House <span class="loc">Cadet Field House</span></div>
+      </div>
+      <div class="wbm-sched-row">
+        <div class="t">4:00 – 6:00 PM</div>
+        <div>Squadron Open Houses <span class="loc">Sijan Hall &amp; Vandenberg Hall</span></div>
+      </div>
+      <div class="wbm-sched-row">
+        <div class="t">4:00 – 6:00 PM</div>
+        <div>Dean of Faculty Open House <span class="loc">Fairchild Hall</span></div>
+      </div>
+      <div class="wbm-sched-row">
+        <div class="t">6:00 PM</div>
+        <div>Cadet Dismissal &amp; Sign-Out <span class="loc">Mitchell Hall</span></div>
+      </div>
+    </div>
+
+    <div class="wbm-details">
+      <div class="wbm-detail-row">
+        <div class="wbm-detail-label">Parking</div>
+        <div>Cadet Field House, Parade Field, and Cadet parking lots, with shuttle service. Arrive early — lots fill
+          before the parade.</div>
+      </div>
+      <div class="wbm-detail-row">
+        <div class="wbm-detail-label">Attire</div>
+        <div>Business casual, or as specified per event. Bring layers and comfortable walking shoes — there's a lot of
+          ground between venues.</div>
+      </div>
+      <div class="wbm-detail-row">
+        <div class="wbm-detail-label">Base Access</div>
+        <div>Every visitor must complete the Base Access form in advance. Bring a photo ID.</div>
+      </div>
+    </div>
+
+    <div class="wbm-note">
+      <strong>Tip —</strong> the Info Fair is the easy place to catch us. Grab your shirt Friday so you're set for
+      Saturday's Whiteout.
+    </div>
+  </div>
+
+  <!-- SATURDAY PANEL -->
+  <div class="wbm-panel" id="wbm-saturday">
+    <!-- HEIC_SWAP: this panel uses IMG_1065.heic — replace with a .jpg/.webp copy before publishing -->
+    <div class="wbm-panel-img wbm-img-saturday"></div>
+
+    <h2>Saturday, September 5</h2>
+    <p class="timeslot">Tailgate in the morning, Whiteout at kickoff</p>
+    <p class="panel-intro">Squadron tailgates fill the lots outside Falcon Stadium before the Air Force Falcons take on
+      Duquesne. It's a designated <strong>Whiteout</strong> — wear white, and you'll be part of a stadium that looks
+      like one big USAFA family.</p>
+
+    <div class="wbm-sched">
+      <div class="wbm-sched-row">
+        <div class="t">7:00 AM</div>
+        <div>4&deg; Mandatory Shuttles <span class="loc">Clune Arena to Falcon Stadium</span></div>
+      </div>
+      <div class="wbm-sched-row is-wbm">
+        <div class="t">8:00 – 10:00 AM</div>
+        <div><strong>Wild Blue Merch at the Football Tailgate</strong> — pick up your USAFA Shirt <span class="loc">East
+            entrance of Lot 4</span></div>
+      </div>
+      <div class="wbm-sched-row">
+        <div class="t">7:30 – 10:00 AM</div>
+        <div>Squadron Tailgates <span class="loc">Falcon Stadium lots</span></div>
+      </div>
+      <div class="wbm-sched-row">
+        <div class="t">8:30 AM</div>
+        <div>Squadron Accountability <span class="loc">Falcon Stadium</span></div>
+      </div>
+      <div class="wbm-sched-row">
+        <div class="t">11:00 AM</div>
+        <div>Air Force Falcons vs. Duquesne — <strong>Whiteout game</strong> <span class="loc">Falcon Stadium</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="wbm-details">
+      <div class="wbm-detail-row">
+        <div class="wbm-detail-label">Find Us</div>
+        <div>Look for the Wild Blue Merch setup at the <strong>east entrance of Lot 4</strong>, 8:00 – 10:00 AM. Come in
+          white and ready for kickoff.</div>
+      </div>
+      <div class="wbm-detail-row">
+        <div class="wbm-detail-label">Stadium</div>
+        <div>Falcon Stadium follows a clear-bag policy. Check gate times on your ticket and plan for shuttle lines.
+        </div>
+      </div>
+      <div class="wbm-detail-row">
+        <div class="wbm-detail-label">Weather</div>
+        <div>Full sun at altitude. Sunscreen, a hat, and water go a long way by the second quarter.</div>
+      </div>
+    </div>
+
+    <div class="wbm-note">
+      <strong>Whiteout —</strong> the USAFA Shirt is white on purpose. Wear it to the tailgate and into the stadium.
+    </div>
+  </div>
+
+  <!-- FULL SCHEDULE PANEL -->
+  <div class="wbm-panel" id="wbm-schedule">
+    <h2>The Full Weekend</h2>
+    <p class="panel-intro">A tentative overview of Parents' Weekend, September 2–7, 2026. Times and venues can shift for
+      weather or security — always confirm against the official schedule before you go.</p>
+
+    <div class="wbm-sched">
+      <h3 class="wbm-sched-day">Wednesday, September 2</h3>
+      <div class="wbm-sched-row">
+        <div class="t">7:30 AM – 4:30 PM</div>
+        <div>Doolittle Outfitters Open <span class="loc">Doolittle Hall</span></div>
+      </div>
+      <div class="wbm-sched-row">
+        <div class="t">9:00 AM – 5:00 PM</div>
+        <div>Hosmer Visitor Center <span class="loc">Outside North Gate</span></div>
+      </div>
+      <div class="wbm-sched-row">
+        <div class="t">8:00 AM – 4:30 PM</div>
+        <div>Parents' Club Presidents Conference — Day 1 <span class="loc">Polaris Hall</span></div>
+      </div>
+      <div class="wbm-sched-row">
+        <div class="t">6:00 – 8:00 PM</div>
+        <div>Parents' Club Presidents Reception <span class="loc">East Club</span></div>
+      </div>
+
+      <h3 class="wbm-sched-day">Thursday, September 3</h3>
+      <div class="wbm-sched-row">
+        <div class="t">7:30 AM – 4:30 PM</div>
+        <div>Doolittle Outfitters <span class="loc">Doolittle Hall</span></div>
+      </div>
+      <div class="wbm-sched-row">
+        <div class="t">8:00 AM – 4:30 PM</div>
+        <div>Parents' Club Presidents Conference — Day 2 <span class="loc">Polaris Hall</span></div>
+      </div>
+      <div class="wbm-sched-row">
+        <div class="t">11:00 AM – 5:00 PM</div>
+        <div>Planetarium Showings <span class="loc">Planetarium</span></div>
+      </div>
+      <div class="wbm-sched-row">
+        <div class="t">3:00 – 7:00 PM</div>
+        <div>Force Support Squadron Activities <span class="loc">Multiple locations</span></div>
+      </div>
+      <div class="wbm-sched-row">
+        <div class="t">3:30 – 5:30 PM</div>
+        <div>Airfield Open House <span class="loc">Davis Airfield</span></div>
+      </div>
+      <div class="wbm-sched-row">
+        <div class="t">6:00 PM</div>
+        <div>Women's Soccer vs. University of Montana <span class="loc">Cadet Soccer Stadium</span></div>
+      </div>
+
+      <h3 class="wbm-sched-day">Friday, September 4</h3>
+      <div class="wbm-sched-row">
+        <div class="t">7:30 – 7:55 AM</div>
+        <div>Demonstrations — Falconry, Honor Guard, Sabre Drill <span class="loc">Stillman Field</span></div>
+      </div>
+      <div class="wbm-sched-row">
+        <div class="t">8:00 – 8:50 AM</div>
+        <div>Cadet Wing Parade <span class="loc">Stillman Field</span></div>
+      </div>
+      <div class="wbm-sched-row">
+        <div class="t">8:00 – 9:00 AM</div>
+        <div>Prep School Parade <span class="loc">Black Field</span></div>
+      </div>
+      <div class="wbm-sched-row">
+        <div class="t">8:50 – 9:30 AM</div>
+        <div>Cadet Aviation Capabilities Exercise (CAPEX) <span class="loc">Stillman Field</span></div>
+      </div>
+      <div class="wbm-sched-row is-wbm">
+        <div class="t">10:00 AM – 2:00 PM</div>
+        <div><strong>Wild Blue Merch — Information Fair</strong> <span class="loc">Arnold Hall Ballroom · Fair 9:30 AM –
+            2:00 PM</span></div>
+      </div>
+      <div class="wbm-sched-row">
+        <div class="t">11:00 AM – 12:30 PM</div>
+        <div>Senior Leaders' Panel &amp; Parents' Q&amp;A <span class="loc">Arnold Hall Theater</span></div>
+      </div>
+      <div class="wbm-sched-row">
+        <div class="t">1:00 – 4:00 PM</div>
+        <div>Athletic Department Open House <span class="loc">Cadet Field House</span></div>
+      </div>
+      <div class="wbm-sched-row">
+        <div class="t">4:00 – 6:00 PM</div>
+        <div>Squadron Open Houses <span class="loc">Sijan &amp; Vandenberg Hall</span></div>
+      </div>
+      <div class="wbm-sched-row">
+        <div class="t">4:00 – 6:00 PM</div>
+        <div>Dean of Faculty Open House <span class="loc">Fairchild Hall</span></div>
+      </div>
+      <div class="wbm-sched-row">
+        <div class="t">6:00 PM</div>
+        <div>Cadet Dismissal &amp; Sign-Out <span class="loc">Mitchell Hall</span></div>
+      </div>
+
+      <h3 class="wbm-sched-day">Saturday, September 5</h3>
+      <div class="wbm-sched-row">
+        <div class="t">7:00 AM</div>
+        <div>4&deg; Mandatory Shuttles <span class="loc">Clune Arena to Falcon Stadium</span></div>
+      </div>
+      <div class="wbm-sched-row is-wbm">
+        <div class="t">8:00 – 10:00 AM</div>
+        <div><strong>Wild Blue Merch — Football Tailgate</strong> <span class="loc">East entrance of Lot 4</span></div>
+      </div>
+      <div class="wbm-sched-row">
+        <div class="t">7:30 – 10:00 AM</div>
+        <div>Squadron Tailgates <span class="loc">Falcon Stadium lots</span></div>
+      </div>
+      <div class="wbm-sched-row">
+        <div class="t">8:30 AM</div>
+        <div>Squadron Accountability <span class="loc">Falcon Stadium</span></div>
+      </div>
+      <div class="wbm-sched-row">
+        <div class="t">11:00 AM</div>
+        <div>Air Force Falcons vs. Duquesne — Whiteout <span class="loc">Falcon Stadium</span></div>
+      </div>
+
+      <h3 class="wbm-sched-day">Sunday, September 6</h3>
+      <div class="wbm-sched-row">
+        <div class="t">9:00 AM</div>
+        <div>Catholic Mass <span class="loc">Polaris Hall</span></div>
+      </div>
+      <div class="wbm-sched-row">
+        <div class="t">9:00 AM</div>
+        <div>Protestant Worship Service <span class="loc">Arnold Hall Ballroom</span></div>
+      </div>
+      <div class="wbm-sched-row">
+        <div class="t">9:00 AM</div>
+        <div>Buddhist Worship Service <span class="loc">Sijan Hall</span></div>
+      </div>
+      <div class="wbm-sched-row">
+        <div class="t">10:00 AM – 2:00 PM</div>
+        <div>Jacks Valley (BCT) Orientation Tour — shuttles every 15 min <span class="loc">Shuttle boarding area</span>
+        </div>
+      </div>
+      <div class="wbm-sched-row">
+        <div class="t">11:30 AM</div>
+        <div>Latter-day Saints (LDS) Worship Service <span class="loc">Jamboree Chapel</span></div>
+      </div>
+      <div class="wbm-sched-row">
+        <div class="t">3:30 PM</div>
+        <div>Orthodox Christian Divine Liturgy <span class="loc">Sijan Hall</span></div>
+      </div>
+
+      <h3 class="wbm-sched-day">Monday, September 7</h3>
+      <div class="wbm-sched-row">
+        <div class="t">6:00 PM</div>
+        <div>Prep School Sign In <span class="loc">Prep School</span></div>
+      </div>
+      <div class="wbm-sched-row">
+        <div class="t">7:50 PM</div>
+        <div>Academy Sign In — C4C &amp; C3C <span class="loc">Sijan / Vandenberg Hall</span></div>
+      </div>
+      <div class="wbm-sched-row">
+        <div class="t">11:00 PM</div>
+        <div>Academy Sign In — C2C &amp; C1C <span class="loc">Sijan / Vandenberg Hall</span></div>
+      </div>
+    </div>
+
+    <div class="wbm-note">
+      <strong>Good to know —</strong> cadets are restricted to a 50-mile travel radius, so book accommodations close to
+      the Academy.
+    </div>
+
+    <p class="panel-intro">For the official, up-to-date schedule, visit <a href="https://www.usafa.edu/parents-weekend/"
+        target="_blank" rel="noopener">usafa.edu/parents-weekend</a>.</p>
+  </div>
+
+  <!-- THE USAFA SHIRT PANEL -->
+  <div class="wbm-panel" id="wbm-shirt">
+    <h2>The USAFA Shirt</h2>
+    <p class="timeslot">A new tradition — starting this Parents' Weekend</p>
+
+    <div class="wbm-shirt">
+      <img src="https://cdn.shopify.com/s/files/1/0622/3921/1671/files/14582742681547551705_2048.jpg?v=1783731308"
+        alt="The USAFA Shirt — back design: cadets marching beneath the Cadet Chapel spires with jets overhead"
+        loading="lazy">
+      <div>
+        <p>The front carries a clean <strong>AIR FORCE ACADEMY</strong> wordmark. The back tells the story: a
+          hand-illustrated scene of cadets marching beneath the Cadet Chapel spires as jets streak overhead, framed by
+          the words that define their four years — <em>Integrity First &bull; Service Before Self &bull; Excellence in
+            All We Do</em>.</p>
+        <p>Printed on a Gildan 5000 heavyweight 100% US cotton tee. Classic relaxed fit, tear-away label. And yes — it's
+          white, made for Saturday's Whiteout.</p>
+      </div>
+    </div>
+
+    <div class="wbm-section-heading">
+      <h2>Every Shirt Gives Back</h2>
+    </div>
+    <p class="panel-intro">This is the tradition we're starting: every USAFA Shirt helps support the Academy community.
+    </p>
+
+    <div class="wbm-give">
+      <div class="wbm-give-card">
+        <span class="amt">$2</span>
+        <span class="who">Per shirt to USAFA Parent Clubs</span>
+      </div>
+      <div class="wbm-give-card">
+        <span class="amt">20%</span>
+        <span class="who">Of profits to Cadet Class Cabinets</span>
+      </div>
+    </div>
+
+    <div class="wbm-note">
+      Our goal: to see <strong>every USAFA family in a Parents' Weekend shirt every September</strong> — a tradition
+      that grows with every new class, year after year.
+    </div>
+
+    <div class="wbm-details">
+      <div class="wbm-detail-row">
+        <div class="wbm-detail-label">Price</div>
+        <div>$20</div>
+      </div>
+      <div class="wbm-detail-row">
+        <div class="wbm-detail-label">Pick Up</div>
+        <div>Friday at the Arnold Hall Info Fair (10:00 AM – 2:00 PM) or Saturday at the Lot 4 tailgate (8:00 – 10:00
+          AM).</div>
+      </div>
+      <div class="wbm-detail-row">
+        <div class="wbm-detail-label">Sizes</div>
+        <div>S through 5XL</div>
+      </div>
+    </div>
+
+    <div class="wbm-btn-wrap"><a href="https://wildbluemerch.com/products/the-parents-weekend-shirt" class="wbm-btn"
+        onclick="wbmTrack('shirt_cta', 'usafa_shirt')">Reserve the USAFA Shirt</a></div>
+  </div>
+
+  <!-- FINAL CTA -->
+  <div class="wbm-cta">
+    <span class="eyebrow">Wear Our Legacy</span>
+    <h2>See You This Weekend</h2>
+    <p>Find us at the Info Fair Friday and the Lot 4 tailgate Saturday. Come in white — let's fill Falcon Stadium with
+      USAFA families.</p>
+    <div class="wbm-btn-wrap"><a href="https://wildbluemerch.com/collections/wild-blue-family-merchandise"
+        class="wbm-btn">Shop USAFA Family Merch</a></div>
+  </div>
+
+</div>
+
+<script>
+  // Fires a GA4 event. Safe no-op if gtag isn't loaded (e.g., preview mode).
+  function wbmTrack(eventName, method) {
+    if (typeof gtag === 'function') {
+      gtag('event', eventName, { method: method, page_location: window.location.href });
+    }
+  }
+
+  (function () {
+    var root = document.querySelector('.wbm-hub');
+    if (!root) return;
+
+    var btns = root.querySelectorAll('.wbm-tab-btn');
+    var panels = root.querySelectorAll('.wbm-panel');
+    btns.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var tab = btn.getAttribute('data-tab');
+        btns.forEach(function (b) { b.classList.remove('is-active'); });
+        panels.forEach(function (p) { p.classList.remove('is-active'); });
+        btn.classList.add('is-active');
+        var panel = root.querySelector('#wbm-' + tab);
+        if (panel) panel.classList.add('is-active');
+      });
+    });
+  })();
+</script>
